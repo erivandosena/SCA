@@ -5,125 +5,64 @@
 package br.net.rwd.sca.dao;
 
 import br.net.rwd.sca.entidades.Locador;
-import java.sql.ResultSet;
+import br.net.rwd.sca.jpa.JpaUtilPattern;
 import java.sql.SQLException;
-import java.util.LinkedList;
 import java.util.List;
+import javax.persistence.EntityManager;
 
 /**
  *
  * @author Erivando
  */
-public class LocadorDAO extends DAOGenerico {
+public class LocadorDAO {
 
     public LocadorDAO() {
     }
 
     public int adiciona(Locador locador) throws SQLException {
-        locador.setCodigo(obtemProximoCod("locador", "locad_cod"));
-        String consulta = "INSERT INTO locador (locad_cod, locad_nome, locad_rg, locad_cpf, locad_estado_civil, locad_profissao, locad_nacionalidade, locad_endereco, locad_num_endereco, locad_bairro, locad_cep, locad_cidade, locad_uf) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        executaCommand(consulta,
-                locador.getCodigo(),
-                locador.getNome(),
-                locador.getRg(),
-                locador.getCpf(),
-                locador.getEstadoCivil(),
-                locador.getProfissao(),
-                locador.getNacionalidade(),
-                locador.getEndereco(),
-                locador.getNumEndereco(),
-                locador.getBairro(),
-                locador.getCep(),
-                locador.getCidade(),
-                locador.getUf());
+        locador.setCodigo(JpaUtilPattern.getInstancia().obtemProximoCod("locador", "codigo"));
 
+        EntityManager em = JpaUtilPattern.getInstancia().getEntityManager();
+        em.persist(locador);
+        em.getTransaction().commit();
+        em.close();
         return locador.getCodigo();
     }
 
-    public void atualiza(Locador locador) throws SQLException {
-        String consulta = "UPDATE locador SET locad_nome=?, locad_rg=?, locad_cpf=?, locad_estado_civil=?, locad_profissao=?, locad_nacionalidade=?, locad_endereco=?, locad_num_endereco=?, locad_bairro=?, locad_cep=?, locad_cidade=?, locad_uf=? WHERE locad_cod=?";
-        executaCommand(consulta,
-                locador.getNome(),
-                locador.getRg(),
-                locador.getCpf(),
-                locador.getEstadoCivil(),
-                locador.getProfissao(),
-                locador.getNacionalidade(),
-                locador.getEndereco(),
-                locador.getNumEndereco(),
-                locador.getBairro(),
-                locador.getCep(),
-                locador.getCidade(),
-                locador.getUf(),
-                locador.getCodigo());
+    public void atualiza(Locador locador) {
+        EntityManager em = JpaUtilPattern.getInstancia().getEntityManager();
+        em.merge(locador);
+        em.getTransaction().commit();
+        em.close();
     }
 
-    public void remove(int codLocador) throws SQLException {
-        executaCommand("DELETE from locador WHERE locad_cod = ?", codLocador);
+    public void remove(int codLocador) {
+        EntityManager em = JpaUtilPattern.getInstancia().getEntityManager();
+        em.remove(em.find(Locador.class, codLocador));
+        em.getTransaction().commit();
+        em.close();
     }
 
-    public Locador seleciona(int codLocador) throws SQLException {
-        ResultSet rs = executaQuery("SELECT locad_cod, locad_nome, locad_rg, locad_cpf, locad_estado_civil, locad_profissao, locad_nacionalidade, locad_endereco, locad_num_endereco, locad_bairro, locad_cep, locad_cidade, locad_uf FROM locador WHERE locad_cod=?", codLocador);
-        Locador locador = null;
-        if (rs.next()) {
-            locador = populaLocador(rs);
-        }
-        rs.close();
-
-        return locador;
+    public Locador seleciona(int codLocador) {
+        return JpaUtilPattern.getInstancia().getEntidade(Locador.class, codLocador);
     }
 
-    public Locador seleciona() throws SQLException {
-        ResultSet rs = executaQuery("SELECT locad_cod, locad_nome, locad_rg, locad_cpf, locad_estado_civil, locad_profissao, locad_nacionalidade, locad_endereco, locad_num_endereco, locad_bairro, locad_cep, locad_cidade, locad_uf FROM locador");
-        Locador locador = null;
-        if (rs.next()) {
-            locador = populaLocador(rs);
-        }
-        rs.close();
-
-        return locador;
+    public List<Locador> seleciona() {
+        return JpaUtilPattern.getInstancia().getLista(Locador.class, "SELECT locad FROM locador locad ORDER BY locad.nome ASC");
     }
 
-    public List<Locador> selecionaLocador() throws SQLException {
-        ResultSet rs = executaQuery("SELECT locad_cod, locad_nome, locad_rg, locad_cpf, locad_estado_civil, locad_profissao, locad_nacionalidade, locad_endereco, locad_num_endereco, locad_bairro, locad_cep, locad_cidade, locad_uf FROM locador");
-        List<Locador> Locador = new LinkedList<Locador>();
-        while (rs.next()) {
-            Locador.add(populaLocador(rs));
-        }
-        rs.close();
-
-        return Locador;
-    }
-
-    private static Locador populaLocador(ResultSet rs) throws SQLException {
-        Locador locador = new Locador();
-
-        locador.setCodigo(rs.getInt("locad_cod"));
-        locador.setNome(rs.getString("locad_nome"));
-        locador.setRg(rs.getString("locad_rg"));
-        locador.setCpf(rs.getString("locad_cpf"));
-        locador.setEstadoCivil(rs.getString("locad_estado_civil"));
-        locador.setProfissao(rs.getString("locad_profissao"));
-        locador.setNacionalidade(rs.getString("locad_nacionalidade"));
-        locador.setEndereco(rs.getString("locad_endereco"));
-        locador.setNumEndereco(rs.getString("locad_num_endereco"));
-        locador.setBairro(rs.getString("locad_bairro"));
-        locador.setCep(rs.getString("locad_cep"));
-        locador.setCidade(rs.getString("locad_cidade"));
-        locador.setUf(rs.getString("locad_uf"));
-
-        return locador;
-    }
-
-    public boolean isContratoAtivoLocador(int codLocador) throws SQLException {
+    /**
+     * @deprecated 
+     * Método não mais necessário usando JPA com anotação orphanRemoval=true na entidade.
+     * @param codLocador
+     * @return boolean
+     */
+    public boolean isContratoAtivoLocador(int codLocador) {
         boolean retorno = false;
-        ResultSet rs = executaQuery("SELECT MAX(contr_cod) FROM contrato WHERE locad_cod=?", codLocador);
-        if (rs.next()) {
-            if (rs.getObject("max") != null) {
-                retorno = true;
-            }
+        Object obj = JpaUtilPattern.getInstancia().getEntidade(Locador.class, "SELECT MAX(contr.codigo) FROM contrato contr WHERE contr.locador.codigo = ?1", codLocador);
+        if (obj != null) {
+            retorno = true;
         }
-        rs.close();
         return retorno;
     }
 }

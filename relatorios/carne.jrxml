@@ -7,41 +7,20 @@
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[SELECT
-     mensalidade."mensa_valor" AS mensalidade_mensa_valor,
-     mensalidade."mensa_vencimento" AS mensalidade_mensa_vencimento,
-     mensalidade."mensa_numero" AS mensalidade_mensa_numero,
-     mensalidade."mensa_observacao" AS mensalidade_mensa_observacao,
-     locador."locad_nome" AS locador_locad_nome,
-     locatario."locat_nome" AS locatario_locat_nome,
-     locatario."locat_cpf" AS locatario_locat_cpf,
-     contrato."contr_numero" AS contrato_contr_numero,
-     contrato."contr_descricao" AS contrato_contr_descricao,
-     locador."locad_cidade" AS locador_locad_cidade,
-     locador."locad_uf" AS locador_locad_uf,
-     locatario."locat_telefone" AS locatario_locat_telefone
-FROM
-     "public"."carne" carne INNER JOIN "public"."mensalidade" mensalidade ON carne."carne_cod" = mensalidade."carne_cod"
-     INNER JOIN "public"."contrato" contrato ON carne."contr_cod" = contrato."contr_cod"
-     INNER JOIN "public"."locador" locador ON contrato."locad_cod" = locador."locad_cod"
-     INNER JOIN "public"."locatario" locatario ON contrato."locat_cod" = locatario."locat_cod"
-WHERE
-     mensalidade."carne_cod" = $P{CODIGO_CARNE}
-ORDER BY
-     mensalidade."mensa_numero" ASC]]>
+		<![CDATA[]]>
 	</queryString>
-	<field name="mensalidade_mensa_valor" class="java.math.BigDecimal"/>
-	<field name="mensalidade_mensa_vencimento" class="java.sql.Date"/>
-	<field name="mensalidade_mensa_numero" class="java.lang.String"/>
-	<field name="mensalidade_mensa_observacao" class="java.lang.String"/>
-	<field name="locador_locad_nome" class="java.lang.String"/>
-	<field name="locatario_locat_nome" class="java.lang.String"/>
-	<field name="locatario_locat_cpf" class="java.lang.String"/>
-	<field name="contrato_contr_numero" class="java.lang.String"/>
-	<field name="contrato_contr_descricao" class="java.lang.String"/>
-	<field name="locador_locad_cidade" class="java.lang.String"/>
-	<field name="locador_locad_uf" class="java.lang.String"/>
-	<field name="locatario_locat_telefone" class="java.lang.String"/>
+	<field name="mensa_valor" class="java.lang.Double"/>
+	<field name="mensa_vencimento" class="java.sql.Date"/>
+	<field name="mensa_numero" class="java.lang.String"/>
+	<field name="mensa_observacao" class="java.lang.String"/>
+	<field name="locad_nome" class="java.lang.String"/>
+	<field name="locat_nome" class="java.lang.String"/>
+	<field name="locat_cpf" class="java.lang.String"/>
+	<field name="contr_numero" class="java.lang.String"/>
+	<field name="contr_descricao" class="java.lang.String"/>
+	<field name="locad_cidade" class="java.lang.String"/>
+	<field name="locad_uf" class="java.lang.String"/>
+	<field name="locat_telefone" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -79,7 +58,7 @@ ORDER BY
 				<textElement>
 					<font fontName="Arial"/>
 				</textElement>
-				<textFieldExpression><![CDATA["Valor aluguel: " + (new DecimalFormat("R$ #,###,##0.00")).format($F{mensalidade_mensa_valor})]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Valor aluguel: " + (new DecimalFormat("R$ #,###,##0.00")).format($F{mensa_valor})]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="41" y="250" width="120" height="8"/>
@@ -107,28 +86,28 @@ ORDER BY
 				<textElement markup="none">
 					<font fontName="Arial" size="11" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[(new SimpleDateFormat("dd/MM/yyyy").format($F{mensalidade_mensa_vencimento}))]]></textFieldExpression>
+				<textFieldExpression><![CDATA[(new SimpleDateFormat("dd/MM/yyyy").format($F{mensa_vencimento}))]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="33" y="36" width="123" height="20"/>
 				<textElement>
 					<font fontName="Arial"/>
 				</textElement>
-				<textFieldExpression><![CDATA["Mensalidade: " + $F{mensalidade_mensa_numero}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Mensalidade: " + $F{mensa_numero}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="33" y="56" width="123" height="20"/>
 				<textElement>
 					<font fontName="Arial"/>
 				</textElement>
-				<textFieldExpression><![CDATA["Vencimento: " + (new SimpleDateFormat("dd/MM/yyyy").format($F{mensalidade_mensa_vencimento}))]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Vencimento: " + (new SimpleDateFormat("dd/MM/yyyy").format($F{mensa_vencimento}))]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="33" y="76" width="123" height="20"/>
 				<textElement>
 					<font fontName="Arial"/>
 				</textElement>
-				<textFieldExpression><![CDATA["Contrato: " + $F{contrato_contr_numero}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Contrato: " + $F{contr_numero}]]></textFieldExpression>
 			</textField>
 			<rectangle radius="6">
 				<reportElement x="26" y="103" width="137" height="22" forecolor="#000000" backcolor="#E3E3E3"/>
@@ -145,7 +124,7 @@ ORDER BY
 				<textElement>
 					<font fontName="Arial"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{locatario_locat_nome}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{locat_nome}]]></textFieldExpression>
 			</textField>
 			<rectangle radius="6">
 				<reportElement x="26" y="157" width="137" height="35" forecolor="#000000" backcolor="#E3E3E3"/>
@@ -162,7 +141,7 @@ ORDER BY
 				<textElement>
 					<font fontName="Arial"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{locatario_locat_cpf}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{locat_cpf}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="33" y="216" width="123" height="27"/>
@@ -172,25 +151,23 @@ ORDER BY
 			<textField>
 				<reportElement x="186" y="77" width="366" height="72"/>
 				<textElement/>
-				<textFieldExpression><![CDATA["Recebi de "+$F{locatario_locat_nome}+
+				<textFieldExpression><![CDATA["Recebi de "+$F{locat_nome}+
 "\n"+
-"A quantia de "+$P{REPORT_SCRIPTLET}.valorRealExtenso(String.format("%.2f", $F{mensalidade_mensa_valor}))+
+"A quantia de "+$P{REPORT_SCRIPTLET}.valorRealExtenso(String.format("%.2f", $F{mensa_valor}))+
 "\n\n"+
-"Referente mensalidade "+$F{mensalidade_mensa_numero}+" do aluguel de " + $F{contrato_contr_descricao} +". Contrato Nº " + $F{contrato_contr_numero}
-]]></textFieldExpression>
+"Referente mensalidade "+$F{mensa_numero}+" do aluguel de " + $F{contr_descricao} +". Contrato Nº " + $F{contr_numero}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="350" y="217" width="205" height="27"/>
 				<textElement textAlignment="Right" markup="none"/>
-				<textFieldExpression><![CDATA[$F{locador_locad_cidade} + "," +$F{locador_locad_uf}+
+				<textFieldExpression><![CDATA[$F{locad_cidade} + "," +$F{locad_uf}+
 " ........../........../.................\nLocal e data do pagamento"]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="182" y="217" width="168" height="27"/>
 				<textElement textAlignment="Center" markup="none"/>
 				<textFieldExpression><![CDATA[".........................................................\n" +
-$F{locador_locad_nome}
-]]></textFieldExpression>
+$F{locad_nome}]]></textFieldExpression>
 			</textField>
 			<rectangle radius="6">
 				<reportElement x="486" y="42" width="69" height="22" forecolor="#000000" backcolor="#E3E3E3"/>
@@ -200,7 +177,7 @@ $F{locador_locad_nome}
 				<textElement>
 					<font fontName="Arial" size="12" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[(new DecimalFormat("#,###,##0.00")).format($F{mensalidade_mensa_valor})]]></textFieldExpression>
+				<textFieldExpression><![CDATA[(new DecimalFormat("#,###,##0.00")).format($F{mensa_valor})]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="439" y="47" width="46" height="20"/>
@@ -214,7 +191,7 @@ $F{locador_locad_nome}
 				<textElement>
 					<font fontName="Arial"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{mensalidade_mensa_observacao}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{mensa_observacao}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="182" y="250" width="120" height="8"/>
@@ -228,7 +205,7 @@ $F{locador_locad_nome}
 				<textElement>
 					<font fontName="Arial"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{locatario_locat_telefone}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{locat_telefone}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="33" y="175" width="27" height="17"/>

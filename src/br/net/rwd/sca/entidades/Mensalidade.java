@@ -7,21 +7,39 @@ package br.net.rwd.sca.entidades;
 import br.net.rwd.sca.util.ColunaSwing;
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  *
  * @author Erivando
  */
+@Entity(name = "mensalidade")
 public class Mensalidade implements Serializable {
+    private static final long serialVersionUID = 1L;
 
+    @Id
+    @Column(name = "mensa_cod", nullable = false)
     private Integer codigo;
-    @ColunaSwing(descricao="Valor R$")
+    @Column(name = "mensa_valor",scale=8,precision=2)
+    @ColunaSwing(descricao = "Valor R$")
     private double valor;
-    @ColunaSwing(descricao="Vencimento")
+    @Temporal(TemporalType.DATE)
+    @Column(name = "mensa_vencimento")
+    @ColunaSwing(descricao = "Vencimento")
     private Date vencimento;
-    @ColunaSwing(descricao="Mensalidade")
+    @Column(name = "mensa_numero")
+    @ColunaSwing(descricao = "Mensalidade")
     private String numero;
+    @Column(name = "mensa_observacao")
     private String observacao;
+    @ManyToOne
+    @JoinColumn(name = "carne_cod", referencedColumnName = "carne_cod")
     public Carne carne;
 
     public Mensalidade() {
@@ -109,5 +127,4 @@ public class Mensalidade implements Serializable {
         hash = 67 * hash + (this.codigo != null ? this.codigo.hashCode() : 0);
         return hash;
     }
-    
 }

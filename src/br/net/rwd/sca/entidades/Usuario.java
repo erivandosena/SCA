@@ -5,21 +5,30 @@
 package br.net.rwd.sca.entidades;
 
 import br.net.rwd.sca.util.ColunaSwing;
+import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.swing.table.DefaultTableCellRenderer;
 
 /**
  *
  * @author Erivando
  */
-public class Usuario implements java.io.Serializable {
+@Entity(name = "usuario")
+public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    
+    @Id
+    @Column(name = "usua_cod", nullable = false)
     private Integer codigo;
-    @ColunaSwing(descricao="Nome", renderizador=DefaultTableCellRenderer.class, corDeFundo="")
+    @Column(name = "usua_nome")
+    @ColunaSwing(descricao = "Nome", renderizador = DefaultTableCellRenderer.class, corDeFundo = "")
     private String nome;
-    @ColunaSwing(descricao="Login", renderizador=DefaultTableCellRenderer.class, corDeFundo="")
+    @Column(name = "usua_login")
+    @ColunaSwing(descricao = "Login", renderizador = DefaultTableCellRenderer.class, corDeFundo = "")
     private String login;
+    @Column(name = "usua_senha")
     private String senha;
 
     public Usuario() {

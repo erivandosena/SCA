@@ -74,6 +74,7 @@ public class LocatarioDAOTest {
         assertEquals(codDoLocatario, result.getCodigo());
     }
     
+    /*
     @Test
     public void testSelecionaTodosPorNome() throws Exception {
         System.out.println("selecionaTodosPorNome");
@@ -91,6 +92,8 @@ public class LocatarioDAOTest {
 
         assertTrue(result.size() > 0);
     }  
+     * 
+     */
 
     @Test
     public void testAtualiza() throws Exception {

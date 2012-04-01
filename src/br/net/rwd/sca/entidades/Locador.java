@@ -7,26 +7,48 @@ package br.net.rwd.sca.entidades;
 import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 /**
  *
  * @author Erivando
  */
+@Entity(name = "locador")
 public class Locador implements Serializable {
+    private static final long serialVersionUID = 1L;
 
+    @Id
+    @Column(name = "locad_cod", nullable = false)
     private Integer codigo;
+    @Column(name = "locad_nome")
     private String nome;
+    @Column(name = "locad_rg")
     private String rg;
+    @Column(name = "locad_cpf")
     private String cpf;
+    @Column(name = "locad_estado_civil")
     private String estadoCivil;
+    @Column(name = "locad_profissao")
     private String profissao;
+    @Column(name = "locad_nacionalidade")
     private String nacionalidade;
+    @Column(name = "locad_endereco")
     private String endereco;
+    @Column(name = "locad_num_endereco")
     private String numEndereco;
+    @Column(name = "locad_bairro")
     private String bairro;
+    @Column(name = "locad_cep")
     private String cep;
+    @Column(name = "locad_cidade")
     private String cidade;
+    @Column(name = "locad_uf")
     private String uf;
+    @OneToMany(mappedBy="locador",cascade= CascadeType.ALL, orphanRemoval=true)
     private List<Contrato> contratos = new LinkedList<Contrato>();
 
     public Locador() {
@@ -190,6 +212,5 @@ public class Locador implements Serializable {
     public String toString() {
         return getNome();
     }
-    
     
 }

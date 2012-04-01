@@ -1,6 +1,7 @@
 /*==============================================================*/
 /* DBMS name:      PostgreSQL 8                                 */
 /* Created on:     06/02/2012 10:58:36                          */
+/* Update on:      01/04/2012 14:11:46                          */
 /*==============================================================*/
 
 -- Database: sistema_sca
@@ -95,6 +96,7 @@ CREATE TABLE carne
 (
   carne_cod integer NOT NULL,
   contr_cod integer NOT NULL,
+  carne_observacao character varying(100),
   CONSTRAINT pk_carne PRIMARY KEY (carne_cod),
   CONSTRAINT fk_carne_associa_contrato FOREIGN KEY (contr_cod)
       REFERENCES contrato (contr_cod) MATCH SIMPLE
