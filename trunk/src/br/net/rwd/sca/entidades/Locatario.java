@@ -10,33 +10,61 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  *
  * @author Erivando
  */
+@Entity(name = "locatario")
 public class Locatario implements Serializable {
-
+    private static final long serialVersionUID = 1L;
+    
+    @Id
+    @Column(name = "locat_cod", nullable = false)
     private Integer codigo;
+    @Temporal(TemporalType.DATE)
+    @Column(name = "locat_data_cadastro")
     @ColunaSwing(descricao="Cadastrado")
     private Date dataCadastro;
+    @Column(name = "locat_nome")
     @ColunaSwing(descricao="Nome")
     private String nome;
+    @Column(name = "locat_rg")
     private String rg;
+    @Column(name = "locat_cpf")
     @ColunaSwing(descricao="CPF")
     private String cpf;
+    @Column(name = "locat_estado_civil")
     private String estadoCivil;
+    @Column(name = "locat_profissao")
     private String profissao;
+    @Column(name = "locat_nacionalidade")
     private String nacionalidade;
+    @Column(name = "locat_endereco")
     private String endereco;
+    @Column(name = "locat_num_endereco")
     private String numEndereco;
+    @Column(name = "locat_bairro")
     private String bairro;
+    @Column(name = "locat_cep")
     private String cep;
+    @Column(name = "locat_cidade")
     private String cidade;
+    @Column(name = "locat_uf")
     private String uf;
+    @Column(name = "locat_telefone")
     private String telefone;
+    @Column(name = "locat_status")
     private boolean status;
-    private List<Carne> carnes = new LinkedList<Carne>();
+    @OneToMany(mappedBy="locatario",cascade= CascadeType.ALL, orphanRemoval=true)
+    private List<Contrato> contratos = new LinkedList<Contrato>();
 
     public Locatario() {
     }
@@ -70,14 +98,6 @@ public class Locatario implements Serializable {
 
     public void setBairro(String bairro) {
         this.bairro = bairro;
-    }
-
-    public List<Carne> getCarnes() {
-        return carnes;
-    }
-
-    public void setCarnes(List<Carne> carnes) {
-        this.carnes = carnes;
     }
 
     public String getCep() {
@@ -198,6 +218,14 @@ public class Locatario implements Serializable {
 
     public void setUf(String uf) {
         this.uf = uf;
+    }
+
+    public List<Contrato> getContratos() {
+        return contratos;
+    }
+
+    public void setContratos(List<Contrato> contratos) {
+        this.contratos = contratos;
     }
 
     @Override

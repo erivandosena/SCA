@@ -66,7 +66,7 @@ public class UsuarioDAOTest {
     public void testSelecionaTodos() throws Exception {
         System.out.println("seleciona todos");
         UsuarioDAO instance = new UsuarioDAO();
-        assertTrue(instance.selecionaTodos().size() > 0);
+        assertTrue(instance.seleciona().size() > 0);
     }
 
     @Test

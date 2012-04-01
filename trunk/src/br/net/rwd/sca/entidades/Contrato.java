@@ -7,26 +7,55 @@ package br.net.rwd.sca.entidades;
 import br.net.rwd.sca.util.ColunaSwing;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  *
  * @author Erivando
  */
+@Entity(name = "contrato")
 public class Contrato implements Serializable {
+    private static final long serialVersionUID = 1L;
 
+    @Id
+    @Column(name = "contr_cod", nullable = false)
     private Integer codigo;
+    @Column(name = "contr_numero")
     @ColunaSwing(descricao="Número")
     private String numero;
+    @Column(name = "contr_descricao")
     @ColunaSwing(descricao="Descrição")
     private String descricao;
+    @Column(name = "contr_mensalidade")
     @ColunaSwing(descricao="Valor R$")
     private double mensalidade;
+    @Column(name = "contr_prazo")
     @ColunaSwing(descricao="Prazo")
     private int prazo;
+    @Temporal(TemporalType.DATE)
+    @Column(name = "contr_data_inicial")
     private Date dataInicial;
+    @Temporal(TemporalType.DATE)
+    @Column(name = "contr_data_final")
     private Date dataFinal;
+    @ManyToOne
+    @JoinColumn(name = "locad_cod")
     private Locador locador;
+    @ManyToOne
+    @JoinColumn(name = "locat_cod")
     private Locatario locatario;
+    @OneToMany(mappedBy="contrato",cascade= CascadeType.ALL, orphanRemoval=true)
+    private List<Carne> carnes = new LinkedList<Carne>();
 
     public Contrato() {
     }
@@ -119,6 +148,14 @@ public class Contrato implements Serializable {
         this.prazo = prazo;
     }
 
+    public List<Carne> getCarnes() {
+        return carnes;
+    }
+
+    public void setCarnes(List<Carne> carnes) {
+        this.carnes = carnes;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -145,4 +182,5 @@ public class Contrato implements Serializable {
     public String toString() {
         return getNumero()+"  "+getLocatario().getNome()+ " ("+ getPrazo()+  " Mensalidades "+ String.format("R$%.2f", getMensalidade())+")";
     }
+
 }

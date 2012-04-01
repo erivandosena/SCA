@@ -5,96 +5,69 @@
 package br.net.rwd.sca.dao;
 
 import br.net.rwd.sca.entidades.Usuario;
+import br.net.rwd.sca.jpa.JpaUtilPattern;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.LinkedList;
 import java.util.List;
+import javax.persistence.EntityManager;
 
 /**
  *
  * @author Erivando
  */
-public class UsuarioDAO extends DAOGenerico {
+public class UsuarioDAO {
 
     public UsuarioDAO() {
     }
 
     public int adiciona(Usuario usuario) throws SQLException {
-        usuario.setCodigo(obtemProximoCod("usuario", "usua_cod"));
-        String consulta = "INSERT INTO usuario (usua_cod, usua_nome, usua_login, usua_senha) VALUES (?, ?, ?, ?)";
-        executaCommand(consulta,
-                usuario.getCodigo(),
-                usuario.getNome(),
-                usuario.getLogin(),
-                usuario.getSenha());
-
+        usuario.setCodigo(JpaUtilPattern.getInstancia().obtemProximoCod("usuario", "codigo"));
+        EntityManager em = JpaUtilPattern.getInstancia().getEntityManager();
+        try {
+            em.persist(usuario);
+        } finally {
+            em.getTransaction().commit();
+            em.close();
+        }
         return usuario.getCodigo();
     }
 
-    public void atualiza(Usuario usuario) throws SQLException {
-        String consulta = "UPDATE usuario SET usua_nome=?, usua_login=?, usua_senha=? WHERE usua_cod=?";
-        executaCommand(consulta,
-                usuario.getNome(),
-                usuario.getLogin(),
-                usuario.getSenha(),
-                usuario.getCodigo());
+    public void atualiza(Usuario usuario) {
+        EntityManager em = JpaUtilPattern.getInstancia().getEntityManager();
+        em.merge(usuario);
+        em.getTransaction().commit();
+        em.close();
     }
 
-    public void remove(int codUsuario) throws SQLException {
-        executaCommand("DELETE from usuario WHERE usua_cod = ?", codUsuario);
-    }
-
-    public Usuario seleciona(int codUsuario) throws SQLException {
-        ResultSet rs = executaQuery("SELECT usua_cod, usua_nome, usua_login, usua_senha FROM usuario WHERE usua_cod=?", codUsuario);
-        Usuario usuarios = null;
-        if (rs.next()) {
-            usuarios = populaUsuarios(rs);
+    public void remove(int codUsuario) {
+        EntityManager em = JpaUtilPattern.getInstancia().getEntityManager();
+        try {
+            em.remove(em.find(Usuario.class, codUsuario));
+        } finally {
+            em.getTransaction().commit();
+            em.close();
         }
-        rs.close();
-
-        return usuarios;
     }
 
-    public List<Usuario> selecionaTodos() throws SQLException {
-        ResultSet rs = executaQuery("SELECT usua_cod, usua_nome, usua_login, usua_senha FROM usuario");
-        List<Usuario> usuarios = new LinkedList<Usuario>();
-        while (rs.next()) {
-            usuarios.add(populaUsuarios(rs));
-        }
-        rs.close();
-
-        return usuarios;
+    public Usuario seleciona(int codUsuario) {
+        return JpaUtilPattern.getInstancia().getEntidade(Usuario.class, codUsuario);
+    }
+    
+    public List<Usuario> seleciona() {
+        return JpaUtilPattern.getInstancia().getLista(Usuario.class, "SELECT usua FROM usuario usua ORDER BY usua.nome ASC");
     }
 
-    public static Usuario populaUsuarios(ResultSet rs) throws SQLException {
-
-        Usuario usuario = new Usuario();
-
-        usuario.setCodigo(rs.getInt("usua_cod"));
-        usuario.setNome(rs.getString("usua_nome"));
-        usuario.setLogin(rs.getString("usua_login"));
-        usuario.setSenha(rs.getString("usua_senha"));
-
-        return usuario;
+    public Usuario isLoginUsuarioSenha(String login, String senha) throws NoSuchAlgorithmException {
+        return JpaUtilPattern.getInstancia().getEntidade(Usuario.class, "SELECT usua FROM usuario usua WHERE usua.login=?1 AND usua.senha=?2", login, criptografar(senha));
     }
 
-    public Usuario isLoginUsuarioSenha(String usuario, String senha) throws SQLException, NoSuchAlgorithmException {
-        ResultSet rs = executaQuery("SELECT usua_cod, usua_nome, usua_login, usua_senha FROM usuario WHERE usua_login=? AND usua_senha=?", usuario, criptografar(senha));
-
-        Usuario usuarioLogin = null;
-        if (rs.next()) {
-            usuarioLogin = populaUsuarios(rs);
-        }
-        rs.close();
-
-        return usuarioLogin;
-    }
-
-    /*
-     * Metodo que vai criar e retornar o hash
+    /**
+     * Método que vai criar e retornar o hash da senha.
+     * @param senha
+     * @return String
+     * @throws NoSuchAlgorithmException 
      */
     public String criptografar(String senha) throws NoSuchAlgorithmException {
         // Cria uma variável de referencia a um objeto MessageDigest
