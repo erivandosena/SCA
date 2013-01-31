@@ -1,0 +1,289 @@
+[2012-03-24 21:41:12,629]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 21:41:33,997]ERROR 21368[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 21:43:21,032]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 21:45:55,393]ERROR     1[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 21:45:59,321]ERROR  3929[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 21:46:03,414]ERROR  8022[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 21:48:02,087]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 22:02:22,344]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 22:13:02,298]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 22:19:54,075]ERROR     1[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 22:38:39,996]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 22:41:09,884]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 22:41:13,893]ERROR  4009[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 22:41:18,913]ERROR  9029[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column carne0_.contrato does not exist
+[2012-03-24 22:43:04,293]ERROR114409[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 22:43:07,811]ERROR117927[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column carne0_.contrato does not exist
+[2012-03-24 22:44:45,811]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 22:45:18,651]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 22:45:23,759]ERROR  5108[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 22:45:49,683]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 22:46:21,720]ERROR 32037[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 22:46:50,600]ERROR 60917[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column carne0_.contrato does not exist
+[2012-03-24 22:49:50,858]ERROR     1[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 23:02:28,511]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 23:02:43,470]ERROR 14959[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column carne0_.contrato does not exist
+[2012-03-24 23:02:47,014]ERROR 18503[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 23:03:32,720]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 23:03:37,495]ERROR  4775[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column carne0_.contrato does not exist
+[2012-03-24 23:03:40,892]ERROR  8172[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-24 23:09:50,138]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-25 14:02:51,404]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-25 14:05:12,704]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-25 14:14:58,039]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-25 14:15:43,812]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-25 14:18:37,693]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-25 14:19:18,461]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-25 14:20:23,985]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-25 14:23:06,237]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-25 14:27:21,733]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-25 14:28:08,915]ERROR     1[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-25 14:30:14,479]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-25 14:30:20,679]ERROR  6200[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-25 14:30:37,627]ERROR 23148[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column locador0_.locad_num_bairro does not exist
+[2012-03-25 18:21:50,676]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column contrato0_.locador does not exist
+[2012-03-26 00:11:33,866]ERROR     0[AWT-EventQueue-0] - br.net.rwd.sca.jpa.JpaUtilPattern.getEntidade(JpaUtilPattern.java:69) - javax.persistence.NoResultException: No entity found for query
+[2012-03-26 00:22:34,480]ERROR     0[AWT-EventQueue-0] - br.net.rwd.sca.jpa.JpaUtilPattern.getEntidade(JpaUtilPattern.java:69) - javax.persistence.NoResultException: No entity found for query
+[2012-03-26 09:35:05,871]ERROR     0[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:965: unexpected token: ON
+[2012-03-26 09:35:05,908]ERROR    37[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:1031: unexpected token: ON
+[2012-03-26 09:37:50,293]ERROR     0[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:965: unexpected token: ON
+[2012-03-26 09:37:50,307]ERROR    14[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:1031: unexpected token: ON
+[2012-03-26 09:48:34,822]ERROR     0[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:965: unexpected token: ON
+[2012-03-26 09:48:34,835]ERROR    13[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:1031: unexpected token: ON
+[2012-03-26 09:48:45,066]ERROR 10244[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:548: unexpected token: ON
+[2012-03-26 09:48:45,070]ERROR 10248[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:610: unexpected token: ON
+[2012-03-26 09:48:45,074]ERROR 10252[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:674: unexpected token: ON
+[2012-03-26 09:48:45,077]ERROR 10255[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:740: unexpected token: ON
+[2012-03-26 10:31:18,677]ERROR     0[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:548: unexpected token: ON
+[2012-03-26 10:31:18,690]ERROR    13[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:610: unexpected token: ON
+[2012-03-26 10:31:18,693]ERROR    16[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:674: unexpected token: ON
+[2012-03-26 10:31:18,696]ERROR    19[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:740: unexpected token: ON
+[2012-03-26 10:31:28,083]ERROR  9406[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:965: unexpected token: ON
+[2012-03-26 10:31:28,085]ERROR  9408[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:1031: unexpected token: ON
+[2012-03-26 10:31:44,560]ERROR 25883[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:965: unexpected token: ON
+[2012-03-26 10:31:44,562]ERROR 25885[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:1031: unexpected token: ON
+[2012-03-26 11:46:21,731]ERROR     0[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:965: unexpected token: ON
+[2012-03-26 11:46:21,746]ERROR    15[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:1031: unexpected token: ON
+[2012-03-26 11:48:20,997]ERROR     0[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:686: unexpected token: mensa
+[2012-03-26 16:25:46,523]ERROR     1[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:548: unexpected token: ON
+[2012-03-26 16:25:46,567]ERROR    45[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:610: unexpected token: ON
+[2012-03-26 16:25:46,570]ERROR    48[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:674: unexpected token: ON
+[2012-03-26 16:25:46,572]ERROR    50[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:740: unexpected token: ON
+[2012-03-26 17:11:39,010]ERROR     0[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:703: unexpected token: ON
+[2012-03-26 17:11:39,024]ERROR    14[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:756: unexpected token: ON
+[2012-03-26 17:11:39,026]ERROR    16[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:812: unexpected token: ON
+[2012-03-26 17:11:39,028]ERROR    18[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:868: unexpected token: ON
+[2012-03-26 17:12:36,265]ERROR     1[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:703: unexpected token: ON
+[2012-03-26 17:12:36,279]ERROR    15[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:756: unexpected token: ON
+[2012-03-26 17:12:36,282]ERROR    18[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:812: unexpected token: ON
+[2012-03-26 17:12:36,285]ERROR    21[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:868: unexpected token: ON
+[2012-03-26 17:17:25,953]ERROR     0[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:709: unexpected token: ON
+[2012-03-26 17:17:25,967]ERROR    14[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:768: unexpected token: ON
+[2012-03-26 17:17:25,969]ERROR    16[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:830: unexpected token: ON
+[2012-03-26 17:17:25,972]ERROR    19[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:892: unexpected token: ON
+[2012-03-26 17:18:34,739]ERROR     1[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:703: unexpected token: ON
+[2012-03-26 17:25:07,592]ERROR     0[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:707: unexpected token: .
+[2012-03-26 17:25:07,606]ERROR    14[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:757: unexpected token: .
+[2012-03-26 17:25:07,609]ERROR    17[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:811: unexpected token: .
+[2012-03-26 17:25:07,611]ERROR    19[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:864: unexpected token: .
+[2012-03-26 17:59:07,814]ERROR     0[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:483: unexpected token: SELECT
+[2012-03-26 17:59:07,830]ERROR    16[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:675: unexpected token: carn
+[2012-03-26 17:59:07,832]ERROR    18[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:680: unexpected token: INNER
+[2012-03-26 18:00:57,607]ERROR     1[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:547: unexpected token: .
+[2012-03-26 18:00:57,620]ERROR    14[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:600: unexpected token: .
+[2012-03-26 18:00:57,624]ERROR    18[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:655: unexpected token: .
+[2012-03-26 18:00:57,627]ERROR    21[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:712: unexpected token: .
+[2012-03-27 10:36:26,723]ERROR     0[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) -  Invalid path: 'locat.nome'
+[2012-03-27 10:36:26,770]ERROR    47[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - <AST>:0:0: unexpected end of subtree
+[2012-03-27 11:41:01,781]ERROR     0[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:241: unexpected token: carne
+[2012-03-27 11:41:01,820]ERROR    39[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:265: unexpected token: mensa
+[2012-03-27 11:41:01,822]ERROR    41[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:281: unexpected token: contr
+[2012-03-27 11:41:01,824]ERROR    43[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:296: unexpected token: locad
+[2012-03-27 11:41:01,826]ERROR    45[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:313: unexpected token: locat
+[2012-03-27 11:45:11,371]ERROR     0[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:170: unexpected token: carne
+[2012-03-27 11:45:11,393]ERROR    22[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:194: unexpected token: mensa
+[2012-03-27 11:45:11,397]ERROR    26[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:210: unexpected token: contr
+[2012-03-27 11:45:11,400]ERROR    29[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:225: unexpected token: locad
+[2012-03-27 11:45:11,403]ERROR    32[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:242: unexpected token: locat
+[2012-03-27 11:48:16,755]ERROR     1[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) -  Invalid path: 'null.codigo'
+[2012-03-27 11:48:16,771]ERROR    17[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) -  right-hand operand of a binary operator was null
+[2012-03-27 12:02:10,356]ERROR     0[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) -  Invalid path: 'null.codigo'
+[2012-03-27 12:02:10,369]ERROR    13[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) -  right-hand operand of a binary operator was null
+[2012-03-27 12:05:21,543]ERROR     0[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) -  Invalid path: 'null.codigo'
+[2012-03-27 12:05:21,559]ERROR    16[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) -  right-hand operand of a binary operator was null
+[2012-03-27 12:06:08,554]ERROR     0[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) -  Invalid path: 'null.codigo'
+[2012-03-27 12:06:08,569]ERROR    15[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) -  right-hand operand of a binary operator was null
+[2012-03-27 12:09:22,711]ERROR     0[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) -  Invalid path: 'null.codigo'
+[2012-03-27 12:09:22,744]ERROR    33[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) -  right-hand operand of a binary operator was null
+[2012-03-27 12:14:35,488]ERROR     1[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) -  Invalid path: 'null.codigo'
+[2012-03-27 12:14:35,502]ERROR    15[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) -  right-hand operand of a binary operator was null
+[2012-03-27 12:16:25,624]ERROR     0[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) -  Invalid path: 'null.codigo'
+[2012-03-27 12:16:25,637]ERROR    13[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) -  right-hand operand of a binary operator was null
+[2012-03-27 12:19:29,537]ERROR     0[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) -  Invalid path: 'null.codigo'
+[2012-03-27 12:19:29,550]ERROR    13[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) -  right-hand operand of a binary operator was null
+[2012-03-27 12:34:42,133]ERROR     0[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:78: unexpected token: ?
+[2012-03-27 14:54:00,405]ERROR     0[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:94: unexpected token: m
+[2012-03-28 11:31:30,714]ERROR     0[AWT-EventQueue-0] - br.net.rwd.sca.jpa.JpaUtilPattern.getEntidade(JpaUtilPattern.java:73) - javax.persistence.NoResultException: No entity found for query
+[2012-03-28 11:31:35,873]ERROR  5159[AWT-EventQueue-0] - br.net.rwd.sca.jpa.JpaUtilPattern.getEntidade(JpaUtilPattern.java:73) - javax.persistence.NoResultException: No entity found for query
+[2012-03-28 16:22:00,489]ERROR     1[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:1: unexpected token: E
+[2012-03-28 22:37:57,335]ERROR     0[AWT-EventQueue-0] - br.net.rwd.sca.jpa.JpaUtilPattern.getEntidade(JpaUtilPattern.java:73) - javax.persistence.NoResultException: No entity found for query
+[2012-03-28 22:38:12,718]ERROR 15383[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:965: unexpected token: ON
+[2012-03-28 22:38:12,721]ERROR 15386[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:1031: unexpected token: ON
+[2012-03-28 22:38:18,915]ERROR 21580[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:965: unexpected token: ON
+[2012-03-28 22:38:18,917]ERROR 21582[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:1031: unexpected token: ON
+[2012-03-28 23:14:55,943]ERROR     1[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:664: unexpected token: ON
+[2012-03-28 23:14:55,957]ERROR    15[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:743: unexpected token: ON
+[2012-03-28 23:14:55,960]ERROR    18[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:817: unexpected token: ON
+[2012-03-28 23:14:55,962]ERROR    20[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:897: unexpected token: ON
+[2012-03-28 23:22:47,627]ERROR     1[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) -  Invalid path: 'null.mensa_valor'
+[2012-03-28 23:22:47,641]ERROR    15[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - <AST>:0:0: unexpected end of subtree
+[2012-03-28 23:25:21,730]ERROR     1[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) -  Invalid path: 'null.mensa_valor'
+[2012-03-28 23:25:21,746]ERROR    17[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - <AST>:0:0: unexpected end of subtree
+[2012-03-28 23:42:30,442]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: column mensalidade.mensa_vencimneto does not exist
+[2012-03-29 00:05:23,379]ERROR     0[AWT-EventQueue-0] - br.net.rwd.sca.jpa.JpaUtilPattern.getEntidade(JpaUtilPattern.java:92) - javax.persistence.NoResultException: No entity found for query
+[2012-03-29 09:57:08,211]ERROR     0[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-03-09"
+[2012-03-29 09:57:08,253]ERROR    42[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-04-09"
+[2012-03-29 09:57:08,255]ERROR    44[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-05-09"
+[2012-03-29 09:57:08,257]ERROR    46[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-06-09"
+[2012-03-29 09:57:08,259]ERROR    48[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-07-09"
+[2012-03-29 09:57:08,261]ERROR    50[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-08-09"
+[2012-03-29 09:57:08,264]ERROR    53[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-09-09"
+[2012-03-29 09:57:08,267]ERROR    56[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-10-09"
+[2012-03-29 09:57:08,268]ERROR    57[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-11-09"
+[2012-03-29 09:57:08,271]ERROR    60[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-12-09"
+[2012-03-29 09:57:08,273]ERROR    62[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2013-01-09"
+[2012-03-29 09:57:08,275]ERROR    64[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2013-02-09"
+[2012-03-29 09:59:56,414]ERROR     0[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-03-09"
+[2012-03-29 09:59:56,427]ERROR    13[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-04-09"
+[2012-03-29 09:59:56,429]ERROR    15[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-05-09"
+[2012-03-29 09:59:56,431]ERROR    17[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-06-09"
+[2012-03-29 09:59:56,433]ERROR    19[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-07-09"
+[2012-03-29 09:59:56,435]ERROR    21[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-08-09"
+[2012-03-29 09:59:56,437]ERROR    23[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-09-09"
+[2012-03-29 09:59:56,439]ERROR    25[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-10-09"
+[2012-03-29 09:59:56,441]ERROR    27[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-11-09"
+[2012-03-29 09:59:56,443]ERROR    29[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-12-09"
+[2012-03-29 09:59:56,444]ERROR    30[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2013-01-09"
+[2012-03-29 09:59:56,447]ERROR    33[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2013-02-09"
+[2012-03-29 10:09:44,067]ERROR     0[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-03-09"
+[2012-03-29 10:09:44,082]ERROR    15[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-04-09"
+[2012-03-29 10:09:44,084]ERROR    17[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-05-09"
+[2012-03-29 10:09:44,088]ERROR    21[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-06-09"
+[2012-03-29 10:09:44,090]ERROR    23[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-07-09"
+[2012-03-29 10:09:44,129]ERROR    62[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-08-09"
+[2012-03-29 10:09:44,132]ERROR    65[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-09-09"
+[2012-03-29 10:09:44,135]ERROR    68[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-10-09"
+[2012-03-29 10:09:44,138]ERROR    71[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-11-09"
+[2012-03-29 10:09:44,141]ERROR    74[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2012-12-09"
+[2012-03-29 10:09:44,153]ERROR    86[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2013-01-09"
+[2012-03-29 10:09:44,156]ERROR    89[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:223) - java.text.ParseException: Unparseable date: "2013-02-09"
+[2012-03-29 10:28:57,419]ERROR     0[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2012-03-09"
+[2012-03-29 10:28:57,433]ERROR    14[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2012-04-09"
+[2012-03-29 10:28:57,435]ERROR    16[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2012-05-09"
+[2012-03-29 10:28:57,437]ERROR    18[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2012-06-09"
+[2012-03-29 10:28:57,439]ERROR    20[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2012-07-09"
+[2012-03-29 10:28:57,441]ERROR    22[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2012-08-09"
+[2012-03-29 10:28:57,442]ERROR    23[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2012-09-09"
+[2012-03-29 10:28:57,444]ERROR    25[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2012-10-09"
+[2012-03-29 10:28:57,446]ERROR    27[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2012-11-09"
+[2012-03-29 10:28:57,448]ERROR    29[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2012-12-09"
+[2012-03-29 10:28:57,450]ERROR    31[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2013-01-09"
+[2012-03-29 10:28:57,452]ERROR    33[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2013-02-09"
+[2012-03-29 10:30:22,501]ERROR     0[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2012-03-09"
+[2012-03-29 10:30:22,515]ERROR    14[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2012-04-09"
+[2012-03-29 10:30:22,517]ERROR    16[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2012-05-09"
+[2012-03-29 10:30:22,518]ERROR    17[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2012-06-09"
+[2012-03-29 10:30:22,520]ERROR    19[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2012-07-09"
+[2012-03-29 10:30:22,523]ERROR    22[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2012-08-09"
+[2012-03-29 10:30:22,526]ERROR    25[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2012-09-09"
+[2012-03-29 10:30:22,528]ERROR    27[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2012-10-09"
+[2012-03-29 10:30:22,531]ERROR    30[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2012-11-09"
+[2012-03-29 10:30:22,533]ERROR    32[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2012-12-09"
+[2012-03-29 10:30:22,536]ERROR    35[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2013-01-09"
+[2012-03-29 10:30:22,538]ERROR    37[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:226) - java.text.ParseException: Unparseable date: "2013-02-09"
+[2012-03-29 10:40:13,881]ERROR     0[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:232) - java.text.ParseException: Unparseable date: "2012-03-09"
+[2012-03-29 10:40:13,894]ERROR    13[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:232) - java.text.ParseException: Unparseable date: "2012-04-09"
+[2012-03-29 10:40:13,896]ERROR    15[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:232) - java.text.ParseException: Unparseable date: "2012-05-09"
+[2012-03-29 10:40:13,898]ERROR    17[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:232) - java.text.ParseException: Unparseable date: "2012-06-09"
+[2012-03-29 10:40:13,901]ERROR    20[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:232) - java.text.ParseException: Unparseable date: "2012-07-09"
+[2012-03-29 10:40:13,903]ERROR    22[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:232) - java.text.ParseException: Unparseable date: "2012-08-09"
+[2012-03-29 10:40:13,905]ERROR    24[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:232) - java.text.ParseException: Unparseable date: "2012-09-09"
+[2012-03-29 10:40:13,907]ERROR    26[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:232) - java.text.ParseException: Unparseable date: "2012-10-09"
+[2012-03-29 10:40:13,909]ERROR    28[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:232) - java.text.ParseException: Unparseable date: "2012-11-09"
+[2012-03-29 10:40:13,911]ERROR    30[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:232) - java.text.ParseException: Unparseable date: "2012-12-09"
+[2012-03-29 10:40:13,913]ERROR    32[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:232) - java.text.ParseException: Unparseable date: "2013-01-09"
+[2012-03-29 10:40:13,915]ERROR    34[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:232) - java.text.ParseException: Unparseable date: "2013-02-09"
+[2012-03-29 10:41:50,291]ERROR     1[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - java.text.ParseException: Unparseable date: "2012-03-09"
+[2012-03-29 10:41:50,304]ERROR    14[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - java.text.ParseException: Unparseable date: "2012-04-09"
+[2012-03-29 10:41:50,306]ERROR    16[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - java.text.ParseException: Unparseable date: "2012-05-09"
+[2012-03-29 10:41:50,307]ERROR    17[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - java.text.ParseException: Unparseable date: "2012-06-09"
+[2012-03-29 10:41:50,310]ERROR    20[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - java.text.ParseException: Unparseable date: "2012-07-09"
+[2012-03-29 10:41:50,311]ERROR    21[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - java.text.ParseException: Unparseable date: "2012-08-09"
+[2012-03-29 10:41:50,313]ERROR    23[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - java.text.ParseException: Unparseable date: "2012-09-09"
+[2012-03-29 10:41:50,315]ERROR    25[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - java.text.ParseException: Unparseable date: "2012-10-09"
+[2012-03-29 10:41:50,317]ERROR    27[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - java.text.ParseException: Unparseable date: "2012-11-09"
+[2012-03-29 10:41:50,319]ERROR    29[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - java.text.ParseException: Unparseable date: "2012-12-09"
+[2012-03-29 10:41:50,321]ERROR    31[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - java.text.ParseException: Unparseable date: "2013-01-09"
+[2012-03-29 10:41:50,323]ERROR    33[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - java.text.ParseException: Unparseable date: "2013-02-09"
+[2012-03-29 10:42:55,110]ERROR     1[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - [Ljava.lang.StackTraceElement;@1ba92db
+[2012-03-29 10:42:55,126]ERROR    17[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - [Ljava.lang.StackTraceElement;@86d1da
+[2012-03-29 10:42:55,128]ERROR    19[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - [Ljava.lang.StackTraceElement;@13b625b
+[2012-03-29 10:42:55,131]ERROR    22[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - [Ljava.lang.StackTraceElement;@1b67d6a
+[2012-03-29 10:42:55,133]ERROR    24[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - [Ljava.lang.StackTraceElement;@1e3cc77
+[2012-03-29 10:42:55,136]ERROR    27[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - [Ljava.lang.StackTraceElement;@84aa02
+[2012-03-29 10:42:55,139]ERROR    30[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - [Ljava.lang.StackTraceElement;@1b5a40a
+[2012-03-29 10:42:55,142]ERROR    33[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - [Ljava.lang.StackTraceElement;@24bfaa
+[2012-03-29 10:42:55,144]ERROR    35[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - [Ljava.lang.StackTraceElement;@a34783
+[2012-03-29 10:42:55,146]ERROR    37[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - [Ljava.lang.StackTraceElement;@1ac13d7
+[2012-03-29 10:42:55,149]ERROR    40[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - [Ljava.lang.StackTraceElement;@4ab84c
+[2012-03-29 10:42:55,151]ERROR    42[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:235) - [Ljava.lang.StackTraceElement;@189acb5
+[2012-03-29 13:00:26,224]ERROR     0[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@1a3b359
+[2012-03-29 13:00:26,238]ERROR    14[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@1ef4b2b
+[2012-03-29 13:00:26,242]ERROR    18[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@1302b69
+[2012-03-29 13:00:26,246]ERROR    22[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@17210a5
+[2012-03-29 13:00:26,249]ERROR    25[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@1a2f5b1
+[2012-03-29 13:00:26,258]ERROR    34[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@1b071c0
+[2012-03-29 13:00:26,262]ERROR    38[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@fbf51d
+[2012-03-29 13:00:26,276]ERROR    52[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@19977bd
+[2012-03-29 13:00:26,290]ERROR    66[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@842d9a
+[2012-03-29 13:00:26,294]ERROR    70[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@1ce00b4
+[2012-03-29 13:00:26,302]ERROR    78[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@19067e5
+[2012-03-29 13:00:26,305]ERROR    81[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@1950e0a
+[2012-03-29 13:02:16,984]ERROR     0[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@1aacc14
+[2012-03-29 13:02:16,998]ERROR    14[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@17d7c7f
+[2012-03-29 13:02:17,002]ERROR    18[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@178a7d9
+[2012-03-29 13:02:17,006]ERROR    22[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@53d3cf
+[2012-03-29 13:02:17,010]ERROR    26[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@176de14
+[2012-03-29 13:02:17,019]ERROR    35[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@ee21f5
+[2012-03-29 13:02:17,022]ERROR    38[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@1f7896f
+[2012-03-29 13:02:17,033]ERROR    49[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@6014f7
+[2012-03-29 13:02:17,047]ERROR    63[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@9ab0
+[2012-03-29 13:02:17,051]ERROR    67[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@1abbec4
+[2012-03-29 13:02:17,059]ERROR    75[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@796e1c
+[2012-03-29 13:02:17,061]ERROR    77[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:259) - [Ljava.lang.StackTraceElement;@2c03ff
+[2012-03-29 13:13:52,817]ERROR     0[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:258) - java.text.ParseException: Unparseable date: "2012-03-09"
+[2012-03-29 13:13:52,831]ERROR    14[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:258) - java.text.ParseException: Unparseable date: "2012-04-09"
+[2012-03-29 13:13:52,834]ERROR    17[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:258) - java.text.ParseException: Unparseable date: "2012-05-09"
+[2012-03-29 13:13:52,837]ERROR    20[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:258) - java.text.ParseException: Unparseable date: "2012-06-09"
+[2012-03-29 13:13:52,849]ERROR    32[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:258) - java.text.ParseException: Unparseable date: "2012-07-09"
+[2012-03-29 13:13:52,853]ERROR    36[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:258) - java.text.ParseException: Unparseable date: "2012-08-09"
+[2012-03-29 13:13:52,865]ERROR    48[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:258) - java.text.ParseException: Unparseable date: "2012-09-09"
+[2012-03-29 13:13:52,876]ERROR    59[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:258) - java.text.ParseException: Unparseable date: "2012-10-09"
+[2012-03-29 13:13:52,879]ERROR    62[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:258) - java.text.ParseException: Unparseable date: "2012-11-09"
+[2012-03-29 13:13:52,891]ERROR    74[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:258) - java.text.ParseException: Unparseable date: "2012-12-09"
+[2012-03-29 13:13:52,904]ERROR    87[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:258) - java.text.ParseException: Unparseable date: "2013-01-09"
+[2012-03-29 13:13:52,906]ERROR    89[AWT-EventQueue-0] - br.net.rwd.sca.entidades.RelatorioMensalidade.imprimirParcelas(RelatorioMensalidade.java:258) - java.text.ParseException: Unparseable date: "2013-02-09"
+[2012-03-29 14:12:40,273]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: syntax error at or near "mensalidade"
+[2012-03-29 14:17:37,816]ERROR     1[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: syntax error at or near "mensalidade"
+[2012-03-29 14:25:54,587]ERROR     1[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:224: unexpected token: ON
+[2012-03-29 14:25:54,601]ERROR    15[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:288: unexpected token: ON
+[2012-03-29 14:25:54,604]ERROR    18[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:347: unexpected token: ON
+[2012-03-29 14:25:54,606]ERROR    20[AWT-EventQueue-0] - org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) - line 1:410: unexpected token: ON
+[2012-03-29 20:02:17,290]ERROR     0[AWT-EventQueue-0] - br.net.rwd.sca.jpa.JpaUtilPattern.getEntidade(JpaUtilPattern.java:102) - javax.persistence.NoResultException: No entity found for query
+[2012-03-29 21:54:54,370]ERROR     0[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - Entrada em lote 0 /* delete br.net.rwd.sca.entidades.Carne */ delete from carne where carne_cod=2 foi abortada. Chame getNextException para ver a causa.
+[2012-03-29 21:54:54,386]ERROR    16[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: update or delete on table "carne" violates foreign key constraint "fk_mensalid_associa_carne" on table "mensalidade"
+  Detalhe: Key (carne_cod)=(2) is still referenced from table "mensalidade".
+[2012-03-29 21:56:15,717]ERROR 81347[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - Entrada em lote 0 /* delete br.net.rwd.sca.entidades.Carne */ delete from carne where carne_cod=3 foi abortada. Chame getNextException para ver a causa.
+[2012-03-29 21:56:15,719]ERROR 81349[AWT-EventQueue-0] - org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) - ERROR: update or delete on table "carne" violates foreign key constraint "fk_mensalid_associa_carne" on table "mensalidade"
+  Detalhe: Key (carne_cod)=(3) is still referenced from table "mensalidade".
+[2012-03-31 20:54:00,928]ERROR     1[AWT-EventQueue-0] - br.net.rwd.sca.jpa.JpaUtilPattern.getEntidade(JpaUtilPattern.java:102) - javax.persistence.NoResultException: No entity found for query
