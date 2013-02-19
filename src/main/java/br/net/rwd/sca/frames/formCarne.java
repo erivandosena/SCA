@@ -10,14 +10,19 @@
  */
 package br.net.rwd.sca.frames;
 
+import br.net.rwd.sca.cobranca.CarneCobranca;
 import br.net.rwd.sca.dao.CarneDAO;
 import br.net.rwd.sca.jasper.RelatorioMensalidade;
 import br.net.rwd.sca.entidades.Carne;
 import br.net.rwd.sca.entidades.Mensalidade;
 import br.net.rwd.sca.util.TableModelEspecial;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import javax.swing.JOptionPane;
 import net.sf.jasperreports.view.JasperViewer;
+import org.jrimum.bopepo.view.BoletoViewer;
+import org.jrimum.utilix.ClassLoaders;
 
 /**
  *
@@ -47,11 +52,13 @@ public class formCarne extends javax.swing.JDialog {
         jPanel4 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTableCarne = new javax.swing.JTable();
-        jButtonImprimir = new javax.swing.JButton();
+        jButtonImprimirRecibo = new javax.swing.JButton();
+        jButtonImprimirBoleto = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableMensalidade = new javax.swing.JTable();
         jLabelTotal = new javax.swing.JLabel();
+        jButtonImprimir2viaBoleto = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Carnê");
@@ -152,12 +159,21 @@ public class formCarne extends javax.swing.JDialog {
         });
         jScrollPane2.setViewportView(jTableCarne);
 
-        jButtonImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/imprimir.png"))); // NOI18N
-        jButtonImprimir.setText("Imprimir");
-        jButtonImprimir.setPreferredSize(new java.awt.Dimension(140, 50));
-        jButtonImprimir.addActionListener(new java.awt.event.ActionListener() {
+        jButtonImprimirRecibo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/imprimir.png"))); // NOI18N
+        jButtonImprimirRecibo.setText("Imprimir Carnê de Recibos");
+        jButtonImprimirRecibo.setPreferredSize(new java.awt.Dimension(140, 50));
+        jButtonImprimirRecibo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonImprimirActionPerformed(evt);
+                jButtonImprimirReciboActionPerformed(evt);
+            }
+        });
+
+        jButtonImprimirBoleto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/imprimir.png"))); // NOI18N
+        jButtonImprimirBoleto.setText("Imprimir Carnê de Pagamento");
+        jButtonImprimirBoleto.setPreferredSize(new java.awt.Dimension(140, 50));
+        jButtonImprimirBoleto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonImprimirBoletoActionPerformed(evt);
             }
         });
 
@@ -168,15 +184,20 @@ public class formCarne extends javax.swing.JDialog {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonImprimir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addComponent(jButtonImprimirBoleto, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonImprimirRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 582, Short.MAX_VALUE)))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonImprimir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonImprimirRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonImprimirBoleto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Mensalidades"));
@@ -191,16 +212,27 @@ public class formCarne extends javax.swing.JDialog {
         ));
         jScrollPane1.setViewportView(jTableMensalidade);
 
-        jLabelTotal.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelTotal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabelTotal.setText("Total R$ 0.00");
+
+        jButtonImprimir2viaBoleto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/imprimir.png"))); // NOI18N
+        jButtonImprimir2viaBoleto.setText("Imprimir 2ª Via Boleto");
+        jButtonImprimir2viaBoleto.setPreferredSize(new java.awt.Dimension(140, 50));
+        jButtonImprimir2viaBoleto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonImprimir2viaBoletoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(397, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabelTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 157, Short.MAX_VALUE)
+                .addComponent(jButtonImprimir2viaBoleto, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
@@ -210,13 +242,16 @@ public class formCarne extends javax.swing.JDialog {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap(234, Short.MAX_VALUE)
-                .addComponent(jLabelTotal))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(238, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonImprimir2viaBoleto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelTotal))
+                .addContainerGap())
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(20, Short.MAX_VALUE)))
+                    .addContainerGap(71, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -226,9 +261,9 @@ public class formCarne extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -239,12 +274,12 @@ public class formCarne extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-640)/2, (screenSize.height-629)/2, 640, 629);
+        setBounds((screenSize.width-640)/2, (screenSize.height-681)/2, 640, 681);
     }// </editor-fold>//GEN-END:initComponents
 
 private void jButtonAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdicionarActionPerformed
@@ -286,7 +321,7 @@ private void jTableCarneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST
     estadoBotoes();
 }//GEN-LAST:event_jTableCarneMouseClicked
 
-private void jButtonImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonImprimirActionPerformed
+private void jButtonImprimirReciboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonImprimirReciboActionPerformed
     if (jTableCarne.getSelectedRow() == -1) {
         JOptionPane.showMessageDialog(this, "Selecione um registro para imprimir!");
         return;
@@ -303,7 +338,7 @@ private void jButtonImprimirActionPerformed(java.awt.event.ActionEvent evt) {//G
         ex.printStackTrace();
         JOptionPane.showMessageDialog(this, ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
     }
-}//GEN-LAST:event_jButtonImprimirActionPerformed
+}//GEN-LAST:event_jButtonImprimirReciboActionPerformed
 
 private void jTableCarneFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTableCarneFocusLost
 }//GEN-LAST:event_jTableCarneFocusLost
@@ -313,10 +348,57 @@ private void jTableCarneComponentResized(java.awt.event.ComponentEvent evt) {//G
 
 private void jTableCarneFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTableCarneFocusGained
 }//GEN-LAST:event_jTableCarneFocusGained
+
+private void jButtonImprimirBoletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonImprimirBoletoActionPerformed
+
+    if (jTableCarne.getSelectedRow() == -1) {
+        JOptionPane.showMessageDialog(this, "Selecione um registro para imprimir!");
+        return;
+    }
+
+    CarneCobranca carne = new CarneCobranca(dao.selecionaCarne(carnes.get(jTableCarne.getSelectedRow()).getCodigo()));
+    //Informando o template personalizado:
+    File templatePersonalizado = new File(ClassLoaders.getResource("/bloqueto/TemplateCarneCaixaA4.pdf").getFile());
+    
+    File boletosPorPagina = carne.groupInPages(carne.bloquetos(), "carne.pdf", templatePersonalizado);
+
+    try {
+
+        Runtime.getRuntime().exec("cmd.exe /c start " + boletosPorPagina.getAbsoluteFile());
+    } catch (IOException ex) {
+        ex.getStackTrace();
+    }
+ 
+}//GEN-LAST:event_jButtonImprimirBoletoActionPerformed
+
+    private void jButtonImprimir2viaBoletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonImprimir2viaBoletoActionPerformed
+
+        if (jTableMensalidade.getSelectedRow() == -1) {
+            JOptionPane.showMessageDialog(this, "Selecione um registro para imprimir!");
+            return;
+        }
+
+        CarneCobranca titulo = new CarneCobranca(dao.selecionaMensalidadePorCodigo(mensalidades.get(jTableMensalidade.getSelectedRow()).getCodigo()));
+
+        BoletoViewer boletoViewer = new BoletoViewer(titulo.bloqueto(), new File(ClassLoaders.getResource("/bloqueto/TemplateTituloUnicoCaixaA4.pdf").getFile()));
+        
+        File boletoUnico = boletoViewer.getPdfAsFile("titulo.pdf");
+
+        try {
+
+            Runtime.getRuntime().exec("cmd.exe /c start " + boletoUnico.getAbsoluteFile());
+        } catch (IOException ex) {
+            ex.getStackTrace();
+        }
+            
+    }//GEN-LAST:event_jButtonImprimir2viaBoletoActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAdicionar;
     private javax.swing.JButton jButtonAlterar;
-    private javax.swing.JButton jButtonImprimir;
+    private javax.swing.JButton jButtonImprimir2viaBoleto;
+    private javax.swing.JButton jButtonImprimirBoleto;
+    private javax.swing.JButton jButtonImprimirRecibo;
     private javax.swing.JButton jButtonRemover;
     private javax.swing.JButton jButtonVoltar;
     private javax.swing.JLabel jLabelTotal;
@@ -358,7 +440,9 @@ private void jTableCarneFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:
         if (jTableCarne.getSelectedRow() > -1) {
             boolean status = carnes.get(jTableCarne.getSelectedRow()).getContrato().getLocatario().isStatus();
             jButtonAlterar.setEnabled(status);
-            jButtonImprimir.setEnabled(status);
+            jButtonImprimirRecibo.setEnabled(status);
+            jButtonImprimirBoleto.setEnabled(status);
         }
     }
+    
 }

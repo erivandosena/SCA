@@ -10,8 +10,10 @@
  */
 package br.net.rwd.sca.frames;
 
+import br.net.rwd.sca.dao.CedenteDAO;
 import br.net.rwd.sca.dao.ContratoDAO;
 import br.net.rwd.sca.dao.LocadorDAO;
+import br.net.rwd.sca.entidades.CedenteCobranca;
 import br.net.rwd.sca.entidades.Contrato;
 import br.net.rwd.sca.entidades.Locador;
 import br.net.rwd.sca.util.TableModelEspecial;
@@ -47,6 +49,7 @@ public class formPrincipal extends javax.swing.JFrame {
         jButtonUsuarios = new javax.swing.JButton();
         jButtonFechar = new javax.swing.JButton();
         jButtonContrato = new javax.swing.JButton();
+        jButtonCedente = new javax.swing.JButton();
         jLabelBoasVindas = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -120,6 +123,16 @@ public class formPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jButtonCedente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cedente.png"))); // NOI18N
+        jButtonCedente.setText("Cedente");
+        jButtonCedente.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonCedente.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButtonCedente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCedenteActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -127,6 +140,8 @@ public class formPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(6, 6, 6)
                 .addComponent(jButtonLocador)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonCedente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonLocatarios)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -148,12 +163,13 @@ public class formPrincipal extends javax.swing.JFrame {
                     .addComponent(jButtonUsuarios)
                     .addComponent(jButtonCarne)
                     .addComponent(jButtonContrato)
+                    .addComponent(jButtonCedente)
                     .addComponent(jButtonLocatarios)
                     .addComponent(jButtonLocador))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabelBoasVindas.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabelBoasVindas.setFont(new java.awt.Font("Tahoma", 1, 12));
         jLabelBoasVindas.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabelBoasVindas.setText("Bem-vindo!");
 
@@ -180,7 +196,7 @@ public class formPrincipal extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 515, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 604, Short.MAX_VALUE)
                     .addComponent(jLabelTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
@@ -201,7 +217,7 @@ public class formPrincipal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabelBoasVindas, javax.swing.GroupLayout.DEFAULT_SIZE, 547, Short.MAX_VALUE))
+                    .addComponent(jLabelBoasVindas, javax.swing.GroupLayout.DEFAULT_SIZE, 636, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -217,7 +233,7 @@ public class formPrincipal extends javax.swing.JFrame {
         );
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-583)/2, (screenSize.height-338)/2, 583, 338);
+        setBounds((screenSize.width-672)/2, (screenSize.height-338)/2, 672, 338);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonLocadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLocadorActionPerformed
@@ -248,8 +264,15 @@ public class formPrincipal extends javax.swing.JFrame {
     private void jButtonFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFecharActionPerformed
         System.exit(0);        
     }//GEN-LAST:event_jButtonFecharActionPerformed
+
+    private void jButtonCedenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCedenteActionPerformed
+        formCedente dialog = new formCedente(new javax.swing.JFrame(), true, new CedenteDAO(), new CedenteCobranca());
+        dialog.setVisible(true);
+    }//GEN-LAST:event_jButtonCedenteActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCarne;
+    private javax.swing.JButton jButtonCedente;
     private javax.swing.JButton jButtonContrato;
     private javax.swing.JButton jButtonFechar;
     private javax.swing.JButton jButtonLocador;

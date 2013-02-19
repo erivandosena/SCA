@@ -5,7 +5,6 @@
 package br.net.rwd.sca.jasper;
 
 import br.net.rwd.sca.jpa.JpaUtilPattern;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
