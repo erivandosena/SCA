@@ -86,6 +86,20 @@ public class JpaUtilPattern {
             em.close();
         }
     }
+    
+    public <T> T getEntidade(Class<T> classe, String jpql) {
+        EntityManager em = getEntityManager();
+        Query consulta = em.createQuery(jpql);
+        T entidade = null;
+        try {
+            if (consulta.getSingleResult() != null) {
+                entidade = (T) consulta.getSingleResult();
+            }
+        } catch (NoResultException nre) {
+            log4j.error(nre);
+        }
+        return entidade;
+    }
 
     public <T> T getEntidade(Class<T> entityClass, String jpql, Object... parametros) {
         EntityManager em = getEntityManager();
