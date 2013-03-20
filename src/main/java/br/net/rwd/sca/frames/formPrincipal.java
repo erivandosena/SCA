@@ -50,6 +50,7 @@ public class formPrincipal extends javax.swing.JFrame {
         jButtonFechar = new javax.swing.JButton();
         jButtonContrato = new javax.swing.JButton();
         jButtonCedente = new javax.swing.JButton();
+        jButtonCedente1 = new javax.swing.JButton();
         jLabelBoasVindas = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -133,6 +134,16 @@ public class formPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jButtonCedente1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cedente.png"))); // NOI18N
+        jButtonCedente1.setText("Retorno");
+        jButtonCedente1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonCedente1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButtonCedente1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCedente1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -142,6 +153,8 @@ public class formPrincipal extends javax.swing.JFrame {
                 .addComponent(jButtonLocador)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonCedente)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonCedente1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonLocatarios)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -158,15 +171,18 @@ public class formPrincipal extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonFechar)
-                    .addComponent(jButtonUsuarios)
-                    .addComponent(jButtonCarne)
-                    .addComponent(jButtonContrato)
-                    .addComponent(jButtonCedente)
-                    .addComponent(jButtonLocatarios)
-                    .addComponent(jButtonLocador))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jButtonFechar)
+                        .addComponent(jButtonUsuarios)
+                        .addComponent(jButtonCarne)
+                        .addComponent(jButtonContrato)
+                        .addComponent(jButtonLocatarios))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jButtonCedente)
+                        .addComponent(jButtonLocador)
+                        .addComponent(jButtonCedente1, javax.swing.GroupLayout.Alignment.TRAILING)))
+                .addContainerGap())
         );
 
         jLabelBoasVindas.setFont(new java.awt.Font("Tahoma", 1, 12));
@@ -196,7 +212,7 @@ public class formPrincipal extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 604, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 693, Short.MAX_VALUE)
                     .addComponent(jLabelTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
@@ -216,8 +232,8 @@ public class formPrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabelBoasVindas, javax.swing.GroupLayout.DEFAULT_SIZE, 636, Short.MAX_VALUE))
+                    .addComponent(jLabelBoasVindas, javax.swing.GroupLayout.DEFAULT_SIZE, 725, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -233,7 +249,7 @@ public class formPrincipal extends javax.swing.JFrame {
         );
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-672)/2, (screenSize.height-338)/2, 672, 338);
+        setBounds((screenSize.width-761)/2, (screenSize.height-338)/2, 761, 338);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonLocadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLocadorActionPerformed
@@ -270,9 +286,14 @@ public class formPrincipal extends javax.swing.JFrame {
         dialog.setVisible(true);
     }//GEN-LAST:event_jButtonCedenteActionPerformed
 
+    private void jButtonCedente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCedente1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonCedente1ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCarne;
     private javax.swing.JButton jButtonCedente;
+    private javax.swing.JButton jButtonCedente1;
     private javax.swing.JButton jButtonContrato;
     private javax.swing.JButton jButtonFechar;
     private javax.swing.JButton jButtonLocador;
