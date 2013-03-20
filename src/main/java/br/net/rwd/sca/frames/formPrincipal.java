@@ -134,7 +134,7 @@ public class formPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jButtonCedente1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cedente.png"))); // NOI18N
+        jButtonCedente1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/retorno.png"))); // NOI18N
         jButtonCedente1.setText("Retorno");
         jButtonCedente1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonCedente1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
