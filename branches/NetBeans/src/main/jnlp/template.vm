@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<jnlp spec="1.0+" codebase="http://www.rwd.net.br/sca/jws" href="$outputFile" version="1.0">
+ <information>
+    <title>SCA</title>
+    <vendor>RWD Serviços de Informática</vendor>
+    <homepage href="http://www.rwd.net.br" /> 
+    <description>SCA - Sistema de Controle de Aluguel</description>
+    <description kind="short">SCA - Gerencie contratos, recibos e boletos</description>
+    <description kind="one-line">Sistema de Controle de Aluguel</description>
+    <description kind="tooltip">SCA v1.0</description>
+    <icon kind="default" href="http://www.rwd.net.br/sca/imagens/icone.gif" width="48" height="48" /> 
+    <icon kind="splash" href="http://www.rwd.net.br/sca/imagens/splash.png" width="350" height="249" />
+    <association mime-type="application/x-java-jnlp-file" extensions="jnlp" />
+    <shortcut online="true">
+        <desktop />
+        <menu submenu="RWD Serviços de Informática" />
+    </shortcut>
+    <offline-allowed />
+ </information>
+ 
+ <security>
+    <all-permissions/>
+ </security>
+ 
+ <update check="background" policy="always" />
+ 
+ <resources>
+    <java version="1.7.0_17" href="http://java.sun.com/products/autodl/j2se" java-vm-args="-esa -Xnoclassgc" initial-heap-size="128m" max-heap-size="512m" />
+    <java version="1.7+" href="http://java.sun.com/products/autodl/j2se" java-vm-args="-esa -Xnoclassgc" initial-heap-size="128m" max-heap-size="512m" />
+    <java version="1.6.0_34" href="http://java.sun.com/products/autodl/j2se" java-vm-args="-esa -Xnoclassgc" initial-heap-size="128m" max-heap-size="512m" />
+    <java version="1.6+" href="http://java.sun.com/products/autodl/j2se" java-vm-args="-esa -Xnoclassgc" initial-heap-size="128m" max-heap-size="512m" />
+    <java version="1.5+" href="http://java.sun.com/products/autodl/j2se" java-vm-args="-esa -Xnoclassgc" initial-heap-size="128m" max-heap-size="512m" />
+
+    <java version="1.7+" java-vm-args="-ea" initial-heap-size="128m" max-heap-size="512m" />
+    <java version="1.6+" java-vm-args="-ea" initial-heap-size="128m" max-heap-size="512m" />
+
+    <property name="jnlp.versionEnabled" value="false"/>
+    $dependencies
+ </resources>
+
+ <application-desc main-class="$mainClass">
+ </application-desc>
+</jnlp>

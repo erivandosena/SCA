@@ -8,6 +8,7 @@
     <class>br.net.rwd.sca.entidades.Locador</class>
     <class>br.net.rwd.sca.entidades.Locatario</class>
     <class>br.net.rwd.sca.entidades.Mensalidade</class>
+    <class>br.net.rwd.sca.entidades.CedenteCobranca</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://127.0.0.1:5432/sistema_sca"/>
       <property name="javax.persistence.jdbc.password" value="postgres"/>

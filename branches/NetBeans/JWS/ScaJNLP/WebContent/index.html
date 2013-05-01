@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Instalação SCA</title>
+</head>
+
+<body>
+
+	<h3 align="center">Bem-vindo(a) à instalação do SCA</h3>
+	<p align="center">
+		<img src="imagens/splash.png" border="0" align="middle" /> 
+		<br /><br />
+
+		<script src="http://java.com/js/deployJava.js"></script>
+		<script>
+			if (deployJava.versionCheck('1.6.0+')) {
+				deployJava.launchButtonPNG='imagens/download_button.png'
+		    	var url = "jws/Sca.jnlp";
+		    	deployJava.createWebStartLaunchButton(url, '1.6.0');
+				//deployJava.createWebStartLaunchButton(url, '1.6.0');
+			} else {
+				document.location.href = "http://java.sun.com";
+			}
+		</script>
+		<noscript>JavaScript é necessário para o correto uso desta página.</noscript>
+	</p>
+
+</body>
+</html>

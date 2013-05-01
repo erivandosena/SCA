@@ -5,6 +5,7 @@
 package br.net.rwd.sca.jasper;
 
 import br.net.rwd.sca.jpa.JpaUtilPattern;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -230,7 +231,8 @@ public class RelatorioMensalidade {
         }
         
 
-        String local = System.getProperty("user.dir") + "\\relatorios\\carne.jasper";
+        //String local = System.getProperty("user.dir") + "\\relatorios\\carne.jasper";
+        InputStream  local = RelatorioMensalidade.class.getClassLoader().getResourceAsStream("relatorios/carne.jasper");  
         
         Map parametros = new HashMap();
         parametros.put("CODIGO_CARNE", codCarne);

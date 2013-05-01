@@ -161,6 +161,16 @@
             <artifactId>jrimum-texgit</artifactId>
             <version>0.2.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.4.7</version>
+        </dependency>
     </dependencies>
     
     <repositories>
@@ -174,10 +184,23 @@
     </repositories>
     
     <build>
+        <finalName>SCA</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.0</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+            
+            <!-- jar com codigos fontes -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
+                <version>2.2</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
@@ -189,27 +212,27 @@
                 </executions>
             </plugin>
 
+            <!-- com libs internas no jar -->
+            <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
-                </configuration>
-            </plugin>
-            
-            <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>2.4</version>
                 <configuration>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
                     <archive>
                         <manifest>
                             <mainClass>br.net.rwd.sca.frames.formLogin</mainClass>
+                            <addClasspath>true</addClasspath>
                         </manifest>
+                        <addMavenDescriptor>false</addMavenDescriptor>
                     </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <descriptors>
+                        <descriptor>src/main/assembly/jar.xml</descriptor>
+                        <descriptor>src/main/assembly/zip.xml</descriptor>
+                    </descriptors>
                 </configuration>
                 <executions>
                     <execution>
@@ -221,10 +244,30 @@
                     </execution>
                 </executions>
             </plugin>
+            -->
 
+            <!-- com libs externas -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>br.net.rwd.sca.frames.formLogin</mainClass>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>.</classpathPrefix>
+                        </manifest>
+                        <addMavenDescriptor>false</addMavenDescriptor>
+                    </archive>
+                </configuration>
+            </plugin>
+            
+            <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.6</version>
                 <executions>
                     <execution>
                         <id>copy-dependencies</id>
@@ -240,7 +283,61 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>  
+            </plugin>
+            -->
+            
+            <plugin>
+                <groupId>org.codehaus.mojo.webstart</groupId>
+                <artifactId>webstart-maven-plugin</artifactId>
+                <version>1.0-beta-2</version>
+
+                <executions>
+                    <execution>
+                        <id>package</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jnlp-inline</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
+                <configuration>
+                    <jnlp>
+                        <outputFile>Sca.jnlp</outputFile>
+                        <mainClass>br.net.rwd.sca.frames.formLogin</mainClass>
+                    </jnlp>
+
+                    <libPath>lib</libPath>
+
+                    <sign>
+                        <keystore>ScaJWS-KeyStore</keystore>
+                        <keypass>21033001</keypass>
+                        <storepass>21033001</storepass>
+                        <alias>ScaJWS</alias>
+                        <validity>3650</validity>
+
+                        <dnameCn>Erivando de Sena Ramos</dnameCn>
+                        <dnameOu>RWD</dnameOu>
+                        <dnameO>RWD Servicos de Informatica</dnameO>
+                        <dnameL>Baturite</dnameL>
+                        <dnameSt>Ceara</dnameSt>
+                        <dnameC>BR</dnameC>
+
+                        <verify>true</verify>
+                        <keystoreConfig>
+                            <delete>true</delete>
+                            <gen>true</gen>
+                        </keystoreConfig>
+                    </sign>
+
+                    <pack200>false</pack200>
+                    <gzip>true</gzip>
+                    <outputJarVersions>false</outputJarVersions>
+                    <verbose>true</verbose>
+
+                </configuration>
+            </plugin>
+            
         </plugins>
     </build>
   

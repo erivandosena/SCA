@@ -5,6 +5,7 @@
 package br.net.rwd.sca.jasper;
 
 import br.net.rwd.sca.jpa.JpaUtilPattern;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -350,8 +351,8 @@ public class RelatorioContrato {
             listaRel.add(rc);
         }
 
-
-        String local = "./relatorios/contrato.jasper";
+        //String local = "./relatorios/contrato.jasper";
+        InputStream  local = RelatorioMensalidade.class.getClassLoader().getResourceAsStream("relatorios/contrato.jasper"); 
 
         Map parametros = new HashMap();
         parametros.put("NUMERO_CONTRATO", numContrato);

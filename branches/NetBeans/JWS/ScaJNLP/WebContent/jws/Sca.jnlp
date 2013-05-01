@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<jnlp spec="1.0+" codebase="http://www.rwd.net.br/sca/jws" href="Sca.jnlp" version="1.0">
+ <information>
+    <title>SCA</title>
+    <vendor>RWD Serviços de Informática</vendor>
+    <homepage href="http://www.rwd.net.br" /> 
+    <description>SCA - Sistema de Controle de Aluguel</description>
+    <description kind="short">SCA - Gerencie contratos, recibos e boletos</description>
+    <description kind="one-line">Sistema de Controle de Aluguel</description>
+    <description kind="tooltip">SCA v1.0</description>
+    <icon kind="default" href="http://www.rwd.net.br/sca/imagens/icone.gif" width="48" height="48" /> 
+    <icon kind="splash" href="http://www.rwd.net.br/sca/imagens/splash.png" width="350" height="249" />
+    <association mime-type="application/x-java-jnlp-file" extensions="jnlp" />
+    <shortcut online="true">
+        <desktop />
+        <menu submenu="RWD Serviços de Informática" />
+    </shortcut>
+    <offline-allowed />
+ </information>
+ 
+ <security>
+    <all-permissions/>
+ </security>
+ 
+ <update check="background" policy="always" />
+ 
+ <resources>
+    <java version="1.7.0_17" href="http://java.sun.com/products/autodl/j2se" java-vm-args="-esa -Xnoclassgc" initial-heap-size="128m" max-heap-size="512m" />
+    <java version="1.7+" href="http://java.sun.com/products/autodl/j2se" java-vm-args="-esa -Xnoclassgc" initial-heap-size="128m" max-heap-size="512m" />
+    <java version="1.6.0_34" href="http://java.sun.com/products/autodl/j2se" java-vm-args="-esa -Xnoclassgc" initial-heap-size="128m" max-heap-size="512m" />
+    <java version="1.6+" href="http://java.sun.com/products/autodl/j2se" java-vm-args="-esa -Xnoclassgc" initial-heap-size="128m" max-heap-size="512m" />
+    <java version="1.5+" href="http://java.sun.com/products/autodl/j2se" java-vm-args="-esa -Xnoclassgc" initial-heap-size="128m" max-heap-size="512m" />
+
+    <java version="1.7+" java-vm-args="-ea" initial-heap-size="128m" max-heap-size="512m" />
+    <java version="1.6+" java-vm-args="-ea" initial-heap-size="128m" max-heap-size="512m" />
+
+    <property name="jnlp.versionEnabled" value="false"/>
+        
+    <jar href="lib/SCA.jar" main="true"/>
+    <jar href="lib/c3p0-0.9.1.2.jar"/>
+    <jar href="lib/hibernate-core-3.6.10.Final.jar"/>
+    <jar href="lib/antlr-2.7.6.jar"/>
+    <jar href="lib/commons-collections-3.1.jar"/>
+    <jar href="lib/dom4j-1.6.1.jar"/>
+    <jar href="lib/hibernate-commons-annotations-3.2.0.Final.jar"/>
+    <jar href="lib/jta-1.1.jar"/>
+    <jar href="lib/hibernate-entitymanager-3.6.10.Final.jar"/>
+    <jar href="lib/cglib-2.2.jar"/>
+    <jar href="lib/asm-3.1.jar"/>
+    <jar href="lib/javassist-3.12.0.GA.jar"/>
+    <jar href="lib/hibernate-validator-4.3.0.Final.jar"/>
+    <jar href="lib/validation-api-1.0.0.GA.jar"/>
+    <jar href="lib/jboss-logging-3.1.0.CR2.jar"/>
+    <jar href="lib/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+    <jar href="lib/log4j-1.2.17.jar"/>
+    <jar href="lib/slf4j-api-1.6.4.jar"/>
+    <jar href="lib/slf4j-log4j12-1.6.4.jar"/>
+    <jar href="lib/postgresql-8.3-606.jdbc3.jar"/>
+    <jar href="lib/itext-2.1.7.jar"/>
+    <jar href="lib/bcmail-jdk14-138.jar"/>
+    <jar href="lib/bcprov-jdk14-138.jar"/>
+    <jar href="lib/bctsp-jdk14-1.38.jar"/>
+    <jar href="lib/bcprov-jdk14-1.38.jar"/>
+    <jar href="lib/bcmail-jdk14-1.38.jar"/>
+    <jar href="lib/itextpdf-5.1.3.jar"/>
+    <jar href="lib/xmlworker-1.1.1.jar"/>
+    <jar href="lib/com-sun-pdfview-1.0.5-201003191900.jar"/>
+    <jar href="lib/pdf-renderer-1.0.5.jar"/>
+    <jar href="lib/jasperreports-4.5.0.jar"/>
+    <jar href="lib/jcommon-1.0.15.jar"/>
+    <jar href="lib/jfreechart-1.0.12.jar"/>
+    <jar href="lib/xml-apis-1.3.02.jar"/>
+    <jar href="lib/jdtcore-3.1.0.jar"/>
+    <jar href="lib/castor-1.2.jar"/>
+    <jar href="lib/poi-ooxml-3.7.jar"/>
+    <jar href="lib/poi-3.7.jar"/>
+    <jar href="lib/poi-ooxml-schemas-3.7.jar"/>
+    <jar href="lib/xmlbeans-2.3.0.jar"/>
+    <jar href="lib/stax-api-1.0.1.jar"/>
+    <jar href="lib/geronimo-stax-api_1.0_spec-1.0.jar"/>
+    <jar href="lib/jackson-core-lgpl-1.7.4.jar"/>
+    <jar href="lib/jackson-mapper-lgpl-1.7.4.jar"/>
+    <jar href="lib/barbecue-1.5-beta1.jar"/>
+    <jar href="lib/jcommon-1.0.17.jar"/>
+    <jar href="lib/commons-vfs2-2.0.jar"/>
+    <jar href="lib/maven-scm-api-1.4.jar"/>
+    <jar href="lib/plexus-utils-1.5.6.jar"/>
+    <jar href="lib/maven-scm-provider-svnexe-1.4.jar"/>
+    <jar href="lib/maven-scm-provider-svn-commons-1.4.jar"/>
+    <jar href="lib/regexp-1.3.jar"/>
+    <jar href="lib/commons-pool-1.6.jar"/>
+    <jar href="lib/commons-math-2.2.jar"/>
+    <jar href="lib/commons-dbcp-1.4.jar"/>
+    <jar href="lib/commons-digester-1.7.jar"/>
+    <jar href="lib/commons-logging-1.1.1.jar"/>
+    <jar href="lib/commons-codec-1.6.jar"/>
+    <jar href="lib/commons-beanutils-1.8.3.jar"/>
+    <jar href="lib/jrimum-bopepo-0.2.3-SNAPSHOT.jar"/>
+    <jar href="lib/jrimum-domkee-0.2.3-SNAPSHOT.jar"/>
+    <jar href="lib/jrimum-vallia-0.2.3-SNAPSHOT.jar"/>
+    <jar href="lib/jrimum-texgit-0.2.0-SNAPSHOT.jar"/>
+    <jar href="lib/jrimum-utilix-0.2.3-SNAPSHOT.jar"/>
+    <jar href="lib/commons-lang-2.4.jar"/>
+    <jar href="lib/jaxb-api-2.2.jar"/>
+    <jar href="lib/jaxb-impl-2.2.jar"/>
+    <jar href="lib/commons-io-2.4.jar"/>
+    <jar href="lib/javax.mail-1.4.7.jar"/>
+    <jar href="lib/activation-1.1.jar"/>
+
+ </resources>
+
+ <application-desc main-class="br.net.rwd.sca.frames.formLogin">
+ </application-desc>
+</jnlp>
