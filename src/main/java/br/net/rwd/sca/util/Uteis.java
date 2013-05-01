@@ -2,7 +2,10 @@ package br.net.rwd.sca.util;
 
 import java.awt.Desktop;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.Reader;
 import java.io.StringReader;
 import java.text.DateFormat;
@@ -10,8 +13,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.text.Document;
 import javax.swing.text.EditorKit;
 import javax.swing.text.html.HTMLEditorKit;
@@ -127,5 +128,28 @@ public class Uteis {
             ex.getStackTrace();
         }
 
+    }
+    
+    /**
+     * Converte um InputStream passado pelo parametro inputStream para File salvo
+     * no caminho informado pelo parametro arquivoLocal
+     * 
+     * @param inputStream
+     * @param arquivoLocal
+     * @return File
+     */
+    public static File inputStreamFile(InputStream inputStream, String arquivoLocal) {
+        try {
+            OutputStream out = new FileOutputStream(arquivoLocal);
+            byte buf[] = new byte[1024];
+            int len;
+            while ((len = inputStream.read(buf)) > 0) {
+                out.write(buf, 0, len);
+            }
+            out.close();
+        } catch (IOException ioe) {
+            ioe.getStackTrace();
+        }
+        return new File(arquivoLocal);
     }
 }

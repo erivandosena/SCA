@@ -352,5 +352,29 @@ public class CarneCobranca {
 
         return arquivoEmBytes;
     }
+    
+    /*
+    public File carneModelo() {
 
+        InputStream template = formCarne.class.getClassLoader().getResourceAsStream("bloqueto/TemplateCarneCaixaA4.pdf");
+        String arquivoLocal = System.getProperty("java.io.tmpdir") + "templateCarne.pdf";
+
+        try {
+            OutputStream out = new FileOutputStream(arquivoLocal);
+            byte buf[] = new byte[1024];
+            int len;
+            while ((len = template.read(buf)) > 0) {
+                out.write(buf, 0, len);
+            }
+            out.close();
+        } catch (IOException ioe) {
+            ioe.getStackTrace();
+        }
+
+        File templateCarne = new File(arquivoLocal);
+
+        return templateCarne;
+    }
+     * 
+     */
 }

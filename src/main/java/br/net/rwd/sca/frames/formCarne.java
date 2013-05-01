@@ -16,13 +16,14 @@ import br.net.rwd.sca.jasper.RelatorioMensalidade;
 import br.net.rwd.sca.entidades.Carne;
 import br.net.rwd.sca.entidades.Mensalidade;
 import br.net.rwd.sca.util.TableModelEspecial;
+import br.net.rwd.sca.util.Uteis;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 import javax.swing.JOptionPane;
 import net.sf.jasperreports.view.JasperViewer;
 import org.jrimum.bopepo.view.BoletoViewer;
-import org.jrimum.utilix.ClassLoaders;
 
 /**
  *
@@ -142,19 +143,6 @@ public class formCarne extends javax.swing.JDialog {
         jTableCarne.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTableCarneMouseClicked(evt);
-            }
-        });
-        jTableCarne.addComponentListener(new java.awt.event.ComponentAdapter() {
-            public void componentResized(java.awt.event.ComponentEvent evt) {
-                jTableCarneComponentResized(evt);
-            }
-        });
-        jTableCarne.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jTableCarneFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jTableCarneFocusLost(evt);
             }
         });
         jScrollPane2.setViewportView(jTableCarne);
@@ -340,15 +328,6 @@ private void jButtonImprimirReciboActionPerformed(java.awt.event.ActionEvent evt
     }
 }//GEN-LAST:event_jButtonImprimirReciboActionPerformed
 
-private void jTableCarneFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTableCarneFocusLost
-}//GEN-LAST:event_jTableCarneFocusLost
-
-private void jTableCarneComponentResized(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jTableCarneComponentResized
-}//GEN-LAST:event_jTableCarneComponentResized
-
-private void jTableCarneFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTableCarneFocusGained
-}//GEN-LAST:event_jTableCarneFocusGained
-
 private void jButtonImprimirBoletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonImprimirBoletoActionPerformed
 
     if (jTableCarne.getSelectedRow() == -1) {
@@ -358,9 +337,29 @@ private void jButtonImprimirBoletoActionPerformed(java.awt.event.ActionEvent evt
 
     CarneCobranca carne = new CarneCobranca(dao.selecionaCarne(carnes.get(jTableCarne.getSelectedRow()).getCodigo()));
     //Informando o template personalizado:
-    File templatePersonalizado = new File(ClassLoaders.getResource("/bloqueto/TemplateCarneCaixaA4.pdf").getFile());
+    //File templatePersonalizado = new File(ClassLoaders.getResource("/bloqueto/TemplateCarneCaixaA4.pdf").getFile());
+    //InputStream templatePersonalizado = formCarne.class.getClassLoader().getResourceAsStream("bloqueto/TemplateCarneCaixaA4.pdf");
+    //URL templatePersonalizado = ClassLoaders.getResource("bloqueto/TemplateCarneCaixaA4.pdf");
+    InputStream templatePersonalizado = formCarne.class.getClassLoader().getResourceAsStream("bloqueto/TemplateCarneCaixaA4.pdf");
+    String arquivoLocal = System.getProperty("java.io.tmpdir") + "templateCarne.pdf";
+
+    /*
+    try {
+        OutputStream out = new FileOutputStream(arquivoLocal);
+        byte buf[] = new byte[1024];
+        int len;
+        while ((len = templatePersonalizado.read(buf)) > 0) {
+            out.write(buf, 0, len);
+        }
+        out.close();
+    } catch (IOException ioe) {
+        ioe.getStackTrace();
+    }
+     * 
+     */
     
-    File boletosPorPagina = carne.groupInPages(carne.bloquetos(), "carne.pdf", templatePersonalizado);
+    //File templateCarnePersonalizado = new File(arquivoLocal);
+    File boletosPorPagina = carne.groupInPages(carne.bloquetos(), System.getProperty("java.io.tmpdir") + "carne.pdf", Uteis.inputStreamFile(templatePersonalizado, arquivoLocal));
 
     try {
 
@@ -379,10 +378,13 @@ private void jButtonImprimirBoletoActionPerformed(java.awt.event.ActionEvent evt
         }
 
         CarneCobranca titulo = new CarneCobranca(dao.selecionaMensalidadePorCodigo(mensalidades.get(jTableMensalidade.getSelectedRow()).getCodigo()));
-
-        BoletoViewer boletoViewer = new BoletoViewer(titulo.bloqueto(), new File(ClassLoaders.getResource("/bloqueto/TemplateTituloUnicoCaixaA4.pdf").getFile()));
         
-        File boletoUnico = boletoViewer.getPdfAsFile("titulo.pdf");
+        InputStream templatePersonalizado = formCarne.class.getClassLoader().getResourceAsStream("bloqueto/TemplateTituloUnicoCaixaA4.pdf");
+        String arquivoLocal = System.getProperty("java.io.tmpdir") + "templateTitulo.pdf";
+       // BoletoViewer boletoViewer = new BoletoViewer(titulo.bloqueto(), formCarne.class.getClassLoader().getResourceAsStream("bloqueto/TemplateTituloUnicoCaixaA4.pdf"));
+        BoletoViewer boletoViewer = new BoletoViewer(titulo.bloqueto(), Uteis.inputStreamFile(templatePersonalizado, arquivoLocal));
+
+        File boletoUnico = boletoViewer.getPdfAsFile(System.getProperty("java.io.tmpdir") + "titulo.pdf");
 
         try {
 

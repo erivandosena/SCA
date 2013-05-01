@@ -50,7 +50,7 @@ public class formPrincipal extends javax.swing.JFrame {
         jButtonFechar = new javax.swing.JButton();
         jButtonContrato = new javax.swing.JButton();
         jButtonCedente = new javax.swing.JButton();
-        jButtonCedente1 = new javax.swing.JButton();
+        jButtonRetorno = new javax.swing.JButton();
         jLabelBoasVindas = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -134,13 +134,13 @@ public class formPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jButtonCedente1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/retorno.png"))); // NOI18N
-        jButtonCedente1.setText("Retorno");
-        jButtonCedente1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButtonCedente1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButtonCedente1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonRetorno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/retorno.png"))); // NOI18N
+        jButtonRetorno.setText("Retorno");
+        jButtonRetorno.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonRetorno.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButtonRetorno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCedente1ActionPerformed(evt);
+                jButtonRetornoActionPerformed(evt);
             }
         });
 
@@ -154,7 +154,7 @@ public class formPrincipal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonCedente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonCedente1)
+                .addComponent(jButtonRetorno)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonLocatarios)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -181,7 +181,7 @@ public class formPrincipal extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jButtonCedente)
                         .addComponent(jButtonLocador)
-                        .addComponent(jButtonCedente1, javax.swing.GroupLayout.Alignment.TRAILING)))
+                        .addComponent(jButtonRetorno, javax.swing.GroupLayout.Alignment.TRAILING)))
                 .addContainerGap())
         );
 
@@ -286,18 +286,19 @@ public class formPrincipal extends javax.swing.JFrame {
         dialog.setVisible(true);
     }//GEN-LAST:event_jButtonCedenteActionPerformed
 
-    private void jButtonCedente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCedente1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonCedente1ActionPerformed
+    private void jButtonRetornoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRetornoActionPerformed
+        formRetorno dialog = new formRetorno(new javax.swing.JFrame(), true, null);
+        dialog.setVisible(true);
+    }//GEN-LAST:event_jButtonRetornoActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCarne;
     private javax.swing.JButton jButtonCedente;
-    private javax.swing.JButton jButtonCedente1;
     private javax.swing.JButton jButtonContrato;
     private javax.swing.JButton jButtonFechar;
     private javax.swing.JButton jButtonLocador;
     private javax.swing.JButton jButtonLocatarios;
+    private javax.swing.JButton jButtonRetorno;
     private javax.swing.JButton jButtonUsuarios;
     private javax.swing.JLabel jLabelBoasVindas;
     private javax.swing.JLabel jLabelTotal;

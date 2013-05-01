@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="carne" pageWidth="595" pageHeight="842" columnWidth="575" leftMargin="20" rightMargin="0" topMargin="0" bottomMargin="0" scriptletClass="br.net.rwd.sca.util.ValorExtenso">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="CODIGO_CARNE" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="mensa_valor" class="java.lang.Double"/>
+	<field name="mensa_vencimento" class="java.sql.Date"/>
+	<field name="mensa_numero" class="java.lang.String"/>
+	<field name="mensa_observacao" class="java.lang.String"/>
+	<field name="locad_nome" class="java.lang.String"/>
+	<field name="locat_nome" class="java.lang.String"/>
+	<field name="locat_cpf" class="java.lang.String"/>
+	<field name="contr_numero" class="java.lang.String"/>
+	<field name="contr_descricao" class="java.lang.String"/>
+	<field name="locad_cidade" class="java.lang.String"/>
+	<field name="locad_uf" class="java.lang.String"/>
+	<field name="locat_telefone" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="262" splitType="Stretch">
+			<rectangle>
+				<reportElement x="182" y="160" width="373" height="27"/>
+			</rectangle>
+			<rectangle radius="6">
+				<reportElement x="182" y="73" width="373" height="80"/>
+			</rectangle>
+			<rectangle radius="6">
+				<reportElement x="26" y="103" width="137" height="142"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="182" y="10" width="137" height="27"/>
+			</rectangle>
+			<rectangle radius="6">
+				<reportElement x="26" y="10" width="137" height="86"/>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="261" width="555" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="172" y="0" width="1" height="262"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="33" y="16" width="123" height="20"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Valor aluguel: " + (new DecimalFormat("R$ #,###,##0.00")).format($F{mensa_valor})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="41" y="250" width="120" height="8"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="6"/>
+				</textElement>
+				<text><![CDATA[RWD Sites e Sistemas www.rwd.net.br]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="10" width="169" height="27"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[recibo de aluguel]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="17" width="63" height="17"/>
+				<textElement>
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<text><![CDATA[Vencimento:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="255" y="17" width="60" height="17"/>
+				<textElement markup="none">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(new SimpleDateFormat("dd/MM/yyyy").format($F{mensa_vencimento}))]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="33" y="36" width="123" height="20"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Mensalidade: " + $F{mensa_numero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="33" y="56" width="123" height="20"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Vencimento: " + (new SimpleDateFormat("dd/MM/yyyy").format($F{mensa_vencimento}))]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="33" y="76" width="123" height="20"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Contrato: " + $F{contr_numero}]]></textFieldExpression>
+			</textField>
+			<rectangle radius="6">
+				<reportElement x="26" y="103" width="137" height="22" forecolor="#000000" backcolor="#E3E3E3"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="33" y="108" width="123" height="17"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Locatário:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="33" y="127" width="123" height="26"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{locat_nome}]]></textFieldExpression>
+			</textField>
+			<rectangle radius="6">
+				<reportElement x="26" y="157" width="137" height="35" forecolor="#000000" backcolor="#E3E3E3"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="33" y="160" width="27" height="17"/>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CPF:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="62" y="160" width="94" height="16"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{locat_cpf}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="33" y="216" width="123" height="27"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[........../........../.................. Data do pagamento]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="186" y="77" width="366" height="72"/>
+				<textElement/>
+				<textFieldExpression><![CDATA["Recebi de "+$F{locat_nome}+
+"\n"+
+"A quantia de "+$P{REPORT_SCRIPTLET}.valorRealExtenso(String.format("%.2f", $F{mensa_valor}))+
+"\n\n"+
+"Referente mensalidade "+$F{mensa_numero}+" do aluguel de " + $F{contr_descricao} +". Contrato Nº " + $F{contr_numero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="217" width="205" height="27"/>
+				<textElement textAlignment="Right" markup="none"/>
+				<textFieldExpression><![CDATA[$F{locad_cidade} + "," +$F{locad_uf}+
+" ........../........../.................\nLocal e data do pagamento"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="217" width="168" height="27"/>
+				<textElement textAlignment="Center" markup="none"/>
+				<textFieldExpression><![CDATA[".........................................................\n" +
+$F{locad_nome}]]></textFieldExpression>
+			</textField>
+			<rectangle radius="6">
+				<reportElement x="486" y="42" width="69" height="22" forecolor="#000000" backcolor="#E3E3E3"/>
+			</rectangle>
+			<textField>
+				<reportElement x="491" y="46" width="61" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(new DecimalFormat("#,###,##0.00")).format($F{mensa_valor})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="439" y="47" width="46" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<text><![CDATA[Valor R$]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="188" y="162" width="364" height="23"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mensa_observacao}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="182" y="250" width="120" height="8"/>
+				<textElement>
+					<font fontName="SansSerif" size="6"/>
+				</textElement>
+				<text><![CDATA[RWD Sites e Sistemas www.rwd.net.br]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="62" y="175" width="94" height="16"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{locat_telefone}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="33" y="175" width="27" height="17"/>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TEL:]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

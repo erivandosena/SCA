@@ -261,7 +261,7 @@ private void jButtonPdfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
         RelatorioContrato rc = new RelatorioContrato();
         try {
             String numero = contratos.get(jTableContratos.getSelectedRow()).getNumero();
-            String arquivo = System.getProperty("user.dir") + "\\relatorios\\Contrato.pdf";
+            String arquivo = System.getProperty("java.io.tmpdir") + "contrato.pdf";
             JasperExportManager.exportReportToPdfFile(rc.impprimirContrato(numero), arquivo);
             this.setVisible(false);
             Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler " + arquivo);
